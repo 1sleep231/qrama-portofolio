@@ -59,13 +59,16 @@ body {
     padding: 100px 10% 20px; /* Padding atas agar tidak tertutup header */
 }
 
-.section:nth-child(odd) {
-    background-color: #ffffff; /* Warna latar selang-seling */
+/* Section Ganjil */
+#home, #portfolio, #experiences {
+    background-color: #ffffff; 
 }
 
-.section:nth-child(even) {
+/* Section Genap */
+#about, #competitions {
     background-color: #f9f9f9;
 }
+
 
 .content {
     max-width: 800px;
