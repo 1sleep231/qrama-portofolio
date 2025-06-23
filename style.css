@@ -146,3 +146,87 @@ body {
     font-size: 15px;
     color: #6c757d; /* Warna teks deskripsi (abu-abu) */
 }
+
+/* ===== CSS UNTUK HOME SECTION BARU ===== */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.home-text {
+    flex: 1.5; /* Memberi lebih banyak ruang untuk teks */
+    text-align: left;
+}
+
+.home-text .greeting {
+    color: #0056b3; /* Warna biru untuk sapaan */
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.home-text h1 {
+    font-size: 60px; /* Ukuran font lebih besar untuk nama */
+    margin: 5px 0;
+    color: #2c3e50;
+}
+
+.home-text h2 {
+    font-size: 20px;
+    font-weight: 400; /* Font lebih tipis untuk subtitle */
+    color: #6c757d;
+}
+
+.home-photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-photo img {
+    width: 350px; /* Ukuran foto bisa disesuaikan */
+    height: 350px;
+    border-radius: 50%; /* Membuat foto menjadi bulat */
+    object-fit: cover;
+    border: 5px solid #0056b3; /* Memberi bingkai biru pada foto */
+}
+
+
+/* ===== CSS UNTUK ABOUT SECTION BARU ===== */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membuat 2 kolom sama besar */
+    gap: 50px; /* Jarak antar kolom */
+    width: 100%;
+    max-width: 1000px; /* Lebar maksimum kontainer */
+    text-align: left;
+}
+
+.about-column h2 {
+    /* Menggunakan style h2 yang sudah ada */
+    margin-bottom: 15px; /* Mengurangi jarak bawah h2 */
+}
+
+.about-column p {
+    font-size: 16px; /* Ukuran font paragraf bisa disesuaikan */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #2c3e50; /* Warna ikon */
+    font-size: 32px; /* Ukuran ikon */
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3; /* Warna ikon saat disentuh kursor */
+    transform: translateY(-5px); /* Efek ikon sedikit terangkat */
+}
