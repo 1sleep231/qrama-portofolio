@@ -1,0 +1,139 @@
+/* ===== PENGATURAN DASAR & FONT ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* INI KUNCI UNTUK EFEK SCROLL! */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* ===== HEADER / NAVIGATION BAR ===== */
+.header {
+    position: fixed; /* Membuat header tetap di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff; /* Warna biru saat kursor di atasnya */
+}
+
+/* ===== PENGATURAN UMUM UNTUK SETIAP SECTION ===== */
+.section {
+    min-height: 100vh; /* Membuat setiap section setinggi layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 10% 20px; /* Padding atas agar tidak tertutup header */
+}
+
+.section:nth-child(odd) {
+    background-color: #ffffff; /* Warna latar selang-seling */
+}
+
+.section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== PORTFOLIO SECTION STYLING ===== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Grid responsif */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Agar gambar tidak keluar dari border-radius */
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efek sedikit terangkat */
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Membuat gambar pas tanpa distorsi */
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.project-info h3 a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+}
+.project-info h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: #666;
+}
