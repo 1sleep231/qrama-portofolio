@@ -11,8 +11,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f5fa; /* Latar utama (biru sangat muda) */
-    color: #2c3e50; /* Warna teks utama (biru tua/charcoal) */
+    background-color: #f0f5fa;
+    color: #2c3e50;
 }
 
 /* ===== HEADER / NAVIGATION BAR ===== */
@@ -22,12 +22,12 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: #ffffff; /* Latar header (putih) */
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Shadow lebih lembut */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -47,16 +47,17 @@ body {
 }
 
 .navbar a:hover {
-    color: #0056b3; /* Warna aksen biru utama */
+    color: #0056b3;
 }
 
 /* ===== PENGATURAN UMUM UNTUK SETIAP SECTION ===== */
 .section {
     min-height: 100vh;
     display: flex;
+    flex-direction: column; /* Mengatur item agar tersusun vertikal */
     align-items: center;
     justify-content: center;
-    padding: 100px 10% 20px;
+    padding: 120px 10% 40px;
 }
 
 /* Section Ganjil - Putih */
@@ -69,23 +70,17 @@ body {
     background-color: #f0f5fa; 
 }
 
-
 .content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px; /* Menyamakan lebar dengan section about */
     text-align: center;
-}
-
-.content h1 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #2c3e50;
 }
 
 .content h2 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 30px;
-    color: #2c3e50; /* Judul section dengan warna aksen biru */
+    color: #2c3e50;
 }
 
 .content p {
@@ -104,7 +99,7 @@ body {
 .project-card {
     background: #ffffff;
     border-radius: 10px;
-    border: 1px solid #e1e8ed; /* Border abu-abu muda */
+    border: 1px solid #e1e8ed;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     text-align: left;
@@ -113,8 +108,8 @@ body {
 
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: #0056b3; /* Border menjadi biru saat hover */
-    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.1); /* Shadow biru saat hover */
+    border-color: #0056b3;
+    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.1);
 }
 
 .project-card img {
@@ -134,7 +129,7 @@ body {
 
 .project-info h3 a {
     text-decoration: none;
-    color: #0056b3; /* Warna aksen biru untuk judul proyek */
+    color: #0056b3;
     font-weight: 600;
 }
 
@@ -144,7 +139,7 @@ body {
 
 .project-info p {
     font-size: 15px;
-    color: #6c757d; /* Warna teks deskripsi (abu-abu) */
+    color: #6c757d;
 }
 
 /* ===== CSS UNTUK HOME SECTION BARU ===== */
@@ -153,29 +148,30 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 1000px;
     gap: 40px;
 }
 
 .home-text {
-    flex: 1.5; /* Memberi lebih banyak ruang untuk teks */
+    flex: 1.5;
     text-align: left;
 }
 
 .home-text .greeting {
-    color: #0056b3; /* Warna biru untuk sapaan */
+    color: #0056b3;
     font-size: 24px;
     font-weight: 600;
 }
 
 .home-text h1 {
-    font-size: 60px; /* Ukuran font lebih besar untuk nama */
+    font-size: 60px;
     margin: 5px 0;
     color: #2c3e50;
 }
 
 .home-text h2 {
     font-size: 20px;
-    font-weight: 400; /* Font lebih tipis untuk subtitle */
+    font-weight: 400;
     color: #6c757d;
 }
 
@@ -187,32 +183,38 @@ body {
 }
 
 .home-photo img {
-    width: 350px; /* Ukuran foto bisa disesuaikan */
+    width: 350px;
     height: 350px;
-    border-radius: 50%; /* Membuat foto menjadi bulat */
+    border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #0056b3; /* Memberi bingkai biru pada foto */
+    border: 5px solid #0056b3;
 }
 
-
 /* ===== CSS UNTUK ABOUT SECTION BARU ===== */
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Membuat 2 kolom sama besar */
-    gap: 50px; /* Jarak antar kolom */
+.section-wrapper {
     width: 100%;
-    max-width: 1000px; /* Lebar maksimum kontainer */
+    max-width: 1000px;
     text-align: left;
 }
 
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    margin-top: 15px; /* Memberi jarak dari super-header */
+}
+
 .about-column h2 {
-    /* Menggunakan style h2 yang sudah ada */
-    margin-bottom: 15px; /* Mengurangi jarak bawah h2 */
+    color: #2c3e50; /* Memastikan warna h2 konsisten */
+    font-size: 28px; /* Menyesuaikan ukuran h2 di kolom */
+    margin-bottom: 15px;
 }
 
 .about-column p {
-    font-size: 16px; /* Ukuran font paragraf bisa disesuaikan */
+    font-size: 16px;
     text-align: justify;
+    line-height: 1.7;
 }
 
 .social-icons {
@@ -220,24 +222,24 @@ body {
 }
 
 .social-icons a {
-    color: #2c3e50; /* Warna ikon */
-    font-size: 32px; /* Ukuran ikon */
+    color: #2c3e50;
+    font-size: 32px;
     margin-right: 20px;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #0056b3; /* Warna ikon saat disentuh kursor */
-    transform: translateY(-5px); /* Efek ikon sedikit terangkat */
+    color: #0056b3;
+    transform: translateY(-5px);
 }
 
 /* CSS UNTUK HEADER KECIL SETIAP SECTION */
 .section-super-header {
     font-size: 16px;
     font-weight: 600;
-    color: #0056b3; /* Warna biru aksen */
-    text-transform: uppercase; /* Membuat huruf menjadi kapital */
-    letter-spacing: 1.5px; /* Jarak antar huruf */
+    color: #0056b3;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
