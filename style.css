@@ -12,7 +12,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ff2929;
-    color: #333;
+    color: #ff2929;
 }
 
 /* ===== HEADER / NAVIGATION BAR ===== */
@@ -129,7 +129,7 @@ body {
 
 .project-info h3 a {
     text-decoration: none;
-    color: #007bff;
+    color: #ff2929;
     font-weight: 600;
 }
 .project-info h3 a:hover {
@@ -138,5 +138,5 @@ body {
 
 .project-info p {
     font-size: 15px;
-    color: #666;
+    color: #ff2929;
 }
