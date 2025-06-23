@@ -22,7 +22,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: #fff;
+    background-color: #ff2929;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,13 +33,13 @@ body {
 .logo {
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: #ff2929;
     text-decoration: none;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #555;
+    color: #ff2929;
     text-decoration: none;
     font-weight: 600;
     margin-left: 35px;
@@ -61,12 +61,12 @@ body {
 
 /* Section Ganjil */
 #home, #portfolio, #experiences {
-    background-color: #ffffff; 
+    background-color: #ff2929; 
 }
 
 /* Section Genap */
 #about, #competitions {
-    background-color: #f9f9f9;
+    background-color: #ff2929;
 }
 
 
