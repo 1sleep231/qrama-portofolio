@@ -11,8 +11,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
-    color: #333; /* Warna teks utama (abu-abu gelap) */
+    background-color: #f0f5fa; /* Latar utama (biru sangat muda) */
+    color: #2c3e50; /* Warna teks utama (biru tua/charcoal) */
 }
 
 /* ===== HEADER / NAVIGATION BAR ===== */
@@ -22,24 +22,24 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: #ffffff; /* Latar belakang header (putih) */
+    background-color: #ffffff; /* Latar header (putih) */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Shadow lebih lembut */
 }
 
 .logo {
     font-size: 24px;
     font-weight: 700;
-    color: #333; /* Warna teks logo */
+    color: #2c3e50;
     text-decoration: none;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #555; /* Warna link navigasi */
+    color: #2c3e50;
     text-decoration: none;
     font-weight: 600;
     margin-left: 35px;
@@ -47,7 +47,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #007bff; /* Warna aksen biru saat kursor di atas link */
+    color: #0056b3; /* Warna aksen biru utama */
 }
 
 /* ===== PENGATURAN UMUM UNTUK SETIAP SECTION ===== */
@@ -64,10 +64,11 @@ body {
     background-color: #ffffff; 
 }
 
-/* Section Genap - Abu-abu muda */
+/* Section Genap - Biru sangat muda */
 #about, #competitions {
-    background-color: #f9f9f9;
+    background-color: #f0f5fa; 
 }
+
 
 .content {
     max-width: 800px;
@@ -77,12 +78,14 @@ body {
 .content h1 {
     font-size: 48px;
     font-weight: 700;
+    color: #2c3e50;
 }
 
 .content h2 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 30px;
+    color: #0056b3; /* Judul section dengan warna aksen biru */
 }
 
 .content p {
@@ -99,16 +102,19 @@ body {
 }
 
 .project-card {
-    background: #ffffff; /* Latar kartu (putih) */
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e1e8ed; /* Border abu-abu muda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     text-align: left;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    border-color: #0056b3; /* Border menjadi biru saat hover */
+    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.1); /* Shadow biru saat hover */
 }
 
 .project-card img {
@@ -128,7 +134,7 @@ body {
 
 .project-info h3 a {
     text-decoration: none;
-    color: #007bff; /* Warna aksen biru untuk judul proyek */
+    color: #0056b3; /* Warna aksen biru untuk judul proyek */
     font-weight: 600;
 }
 
@@ -138,5 +144,5 @@ body {
 
 .project-info p {
     font-size: 15px;
-    color: #666; /* Warna teks deskripsi (abu-abu) */
+    color: #6c757d; /* Warna teks deskripsi (abu-abu) */
 }
