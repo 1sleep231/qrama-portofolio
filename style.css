@@ -6,23 +6,23 @@
 }
 
 html {
-    scroll-behavior: smooth; /* INI KUNCI UNTUK EFEK SCROLL! */
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ff2929;
-    color: #ff2929;
+    background-color: #f0f2f5;
+    color: #333; /* Warna teks utama (abu-abu gelap) */
 }
 
 /* ===== HEADER / NAVIGATION BAR ===== */
 .header {
-    position: fixed; /* Membuat header tetap di atas */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: #ff2929;
+    background-color: #ffffff; /* Latar belakang header (putih) */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,13 +33,13 @@ body {
 .logo {
     font-size: 24px;
     font-weight: 700;
-    color: #ff2929;
+    color: #333; /* Warna teks logo */
     text-decoration: none;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #ff2929;
+    color: #555; /* Warna link navigasi */
     text-decoration: none;
     font-weight: 600;
     margin-left: 35px;
@@ -47,28 +47,27 @@ body {
 }
 
 .navbar a:hover {
-    color: #ff2929; /* Warna biru saat kursor di atasnya */
+    color: #007bff; /* Warna aksen biru saat kursor di atas link */
 }
 
 /* ===== PENGATURAN UMUM UNTUK SETIAP SECTION ===== */
 .section {
-    min-height: 100vh; /* Membuat setiap section setinggi layar */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 10% 20px; /* Padding atas agar tidak tertutup header */
+    padding: 100px 10% 20px;
 }
 
-/* Section Ganjil */
+/* Section Ganjil - Putih */
 #home, #portfolio, #experiences {
-    background-color: #ff2929; 
+    background-color: #ffffff; 
 }
 
-/* Section Genap */
+/* Section Genap - Abu-abu muda */
 #about, #competitions {
-    background-color: #ff2929;
+    background-color: #f9f9f9;
 }
-
 
 .content {
     max-width: 800px;
@@ -94,28 +93,28 @@ body {
 /* ===== PORTFOLIO SECTION STYLING ===== */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Grid responsif */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
     margin-top: 40px;
 }
 
 .project-card {
-    background: #fff;
+    background: #ffffff; /* Latar kartu (putih) */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden; /* Agar gambar tidak keluar dari border-radius */
+    overflow: hidden;
     text-align: left;
     transition: transform 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Efek sedikit terangkat */
+    transform: translateY(-5px);
 }
 
 .project-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Membuat gambar pas tanpa distorsi */
+    object-fit: cover;
 }
 
 .project-info {
@@ -129,14 +128,15 @@ body {
 
 .project-info h3 a {
     text-decoration: none;
-    color: #ff2929;
+    color: #007bff; /* Warna aksen biru untuk judul proyek */
     font-weight: 600;
 }
+
 .project-info h3 a:hover {
     text-decoration: underline;
 }
 
 .project-info p {
     font-size: 15px;
-    color: #ff2929;
+    color: #666; /* Warna teks deskripsi (abu-abu) */
 }
