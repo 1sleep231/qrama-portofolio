@@ -1,3 +1,7 @@
+/* ======================================== */
+/* KODE CSS FINAL - 5 JULI 2024        */
+/* ======================================== */
+
 /* ===== PENGATURAN DASAR & FONT ===== */
 * {
     margin: 0;
@@ -54,9 +58,9 @@ body {
 .section {
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Mengatur item agar tersusun vertikal */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; /* PERBAIKAN UTAMA: KONTEN DIMULAI DARI ATAS */
     padding: 120px 10% 40px;
 }
 
@@ -72,7 +76,7 @@ body {
 
 .content {
     width: 100%;
-    max-width: 1000px; /* Menyamakan lebar dengan section about */
+    max-width: 1000px;
     text-align: center;
 }
 
@@ -86,60 +90,6 @@ body {
 .content p {
     font-size: 18px;
     line-height: 1.6;
-}
-
-/* ===== PORTFOLIO SECTION STYLING ===== */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.project-card {
-    background: #ffffff;
-    border-radius: 10px;
-    border: 1px solid #e1e8ed;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: #0056b3;
-    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.1);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 20px;
-}
-
-.project-info h3 {
-    margin: 0 0 10px 0;
-    font-size: 20px;
-}
-
-.project-info h3 a {
-    text-decoration: none;
-    color: #0056b3;
-    font-weight: 600;
-}
-
-.project-info h3 a:hover {
-    text-decoration: underline;
-}
-
-.project-info p {
-    font-size: 15px;
-    color: #6c757d;
 }
 
 /* ===== CSS UNTUK HOME SECTION BARU ===== */
@@ -202,12 +152,12 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     width: 100%;
-    margin-top: 15px; /* Memberi jarak dari super-header */
+    margin-top: 15px;
 }
 
 .about-column h2 {
-    color: #2c3e50; /* Memastikan warna h2 konsisten */
-    font-size: 28px; /* Menyesuaikan ukuran h2 di kolom */
+    color: #2c3e50;
+    font-size: 28px;
     margin-bottom: 15px;
 }
 
@@ -234,22 +184,150 @@ body {
     transform: translateY(-5px);
 }
 
-/* CSS UNTUK HEADER KECIL SETIAP SECTION */
-.section-super-header {
+/* ===== PORTFOLIO SECTION STYLING ===== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #0056b3;
+    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.project-info h3 a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: 600;
+}
+
+.project-info h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: #6c757d;
+}
+
+/* ===== CSS UNTUK TIMELINE EXPERIENCES & COMPETITIONS ===== */
+.timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #e1e8ed;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 45px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #0056b3;
+    border: 3px solid #f0f5fa;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.timeline-content {
+    text-align: left;
+}
+
+.timeline-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.timeline-company {
     font-size: 16px;
     font-weight: 600;
     color: #0056b3;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline-content ul li {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-content ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 20px;
 }
 
 /* ===== CSS UNTUK SLIDER GAMBAR DI SECTION COMPETITIONS ===== */
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Ukuran lebar maksimum slider diperkecil */
-    margin: 10px auto 0;
+    max-width: 600px;
+    margin: 15px auto 0;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -257,17 +335,16 @@ body {
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Efek animasi geser */
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider img {
     width: 100%;
-    height: 450px;
+    max-height: 450px;
     flex-shrink: 0;
     object-fit: contain;
 }
 
-/* Tombol Prev & Next */
 .prev-button, .next-button {
     position: absolute;
     top: 50%;
@@ -281,7 +358,7 @@ body {
     cursor: pointer;
     border-radius: 0 3px 3px 0;
     transition: background-color 0.3s ease;
-    user-select: none; /* Mencegah teks tombol terseleksi */
+    user-select: none;
 }
 
 .prev-button {
@@ -297,89 +374,12 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ===== CSS UNTUK TIMELINE EXPERIENCES ===== */
-.timeline {
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
-    padding-left: 0;
-}
-
-/* Garis vertikal timeline */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px; /* Posisi garis */
-    top: 5px;
-    bottom: 5px;
-    width: 2px;
-    background-color: #e1e8ed; /* Warna garis */
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px; /* Jarak antar item pengalaman */
-    padding-left: 45px;
-}
-
-/* Titik pada timeline */
-.timeline-dot {
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 18px;
-    height: 18px;
-    background-color: #0056b3; /* Warna titik biru */
-    border: 3px solid #f0f5fa; /* Lingkaran luar agar menyatu dengan background */
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.timeline-content {
-    text-align: left;
-}
-
-.timeline-date {
-    font-size: 14px;
-    font-weight: 600;
-    color: #6c757d; /* Warna abu-abu untuk tanggal */
-    margin-bottom: 5px;
-}
-
-.timeline-content h3 {
-    font-size: 22px;
-    color: #2c3e50;
-    margin-bottom: 5px;
-}
-
-.timeline-company {
+/* ===== CSS UNTUK HEADER KECIL SETIAP SECTION ===== */
+.section-super-header {
     font-size: 16px;
     font-weight: 600;
-    color: #0056b3; /* Warna biru untuk nama perusahaan */
-    margin-bottom: 15px;
-}
-
-.timeline-content ul {
-    list-style: none; /* Menghilangkan bullet point default */
-    padding-left: 0;
-}
-
-.timeline-content ul li {
-    font-size: 16px;
-    color: #6c757d;
-    line-height: 1.7;
-    margin-bottom: 10px;
-    padding-left: 20px; /* Memberi ruang untuk bullet point kustom */
-    position: relative;
-}
-
-/* Membuat bullet point kustom berbentuk panah biru */
-.timeline-content ul li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    top: -2px; /* Posisi 'top' disesuaikan agar rata secara vertikal */
-    font-weight: bold;
     color: #0056b3;
-    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
 }
