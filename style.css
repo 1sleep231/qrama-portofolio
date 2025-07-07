@@ -248,9 +248,10 @@ body {
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 700px; /* Lebar maksimum slider, bisa disesuaikan */
-    margin: 30px auto 0; /* Memberi jarak dari paragraf di atas */
-    overflow: hidden; /* Menyembunyikan gambar yang berada di luar kontainer */
+    max-width: 600px; /* Ukuran lebar maksimum slider diperkecil */
+    aspect-ratio: 16 / 9; /* Menjaga rasio lebar:tinggi agar konsisten */
+    margin: 30px auto 0;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -262,7 +263,9 @@ body {
 
 .slider img {
     width: 100%;
-    flex-shrink: 0; /* Mencegah gambar menyusut */
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 /* Tombol Prev & Next */
