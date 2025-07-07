@@ -296,3 +296,89 @@ body {
 .prev-button:hover, .next-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+/* ===== CSS UNTUK TIMELINE EXPERIENCES ===== */
+.timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 30px; /* Ruang untuk garis timeline */
+}
+
+/* Garis vertikal timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; /* Posisi garis */
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #e1e8ed; /* Warna garis */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px; /* Jarak antar item pengalaman */
+}
+
+/* Titik pada timeline */
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #0056b3; /* Warna titik biru */
+    border: 3px solid #f0f5fa; /* Lingkaran luar agar menyatu dengan background */
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.timeline-content {
+    text-align: left;
+}
+
+.timeline-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d; /* Warna abu-abu untuk tanggal */
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.timeline-company {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0056b3; /* Warna biru untuk nama perusahaan */
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    list-style: none; /* Menghilangkan bullet point default */
+    padding-left: 0;
+}
+
+.timeline-content ul li {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    padding-left: 20px; /* Memberi ruang untuk bullet point kustom */
+    position: relative;
+}
+
+/* Membuat bullet point kustom berbentuk panah biru */
+.timeline-content ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 20px;
+}
