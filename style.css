@@ -302,7 +302,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: 40px;
-    padding-left: 30px; /* Ruang untuk garis timeline */
+    padding-left: 0;
 }
 
 /* Garis vertikal timeline */
@@ -319,6 +319,7 @@ body {
 .timeline-item {
     position: relative;
     margin-bottom: 40px; /* Jarak antar item pengalaman */
+    padding-left: 45px;
 }
 
 /* Titik pada timeline */
@@ -377,7 +378,7 @@ body {
     content: '›';
     position: absolute;
     left: 0;
-    top: 0;
+    top: -2px; /* Posisi 'top' disesuaikan agar rata secara vertikal */
     font-weight: bold;
     color: #0056b3;
     font-size: 20px;
