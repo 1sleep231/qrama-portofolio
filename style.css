@@ -243,3 +243,54 @@ body {
     letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
+
+/* ===== CSS UNTUK SLIDER GAMBAR DI SECTION COMPETITIONS ===== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* Lebar maksimum slider, bisa disesuaikan */
+    margin: 30px auto 0; /* Memberi jarak dari paragraf di atas */
+    overflow: hidden; /* Menyembunyikan gambar yang berada di luar kontainer */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Efek animasi geser */
+}
+
+.slider img {
+    width: 100%;
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+}
+
+/* Tombol Prev & Next */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    transition: background-color 0.3s ease;
+    user-select: none; /* Mencegah teks tombol terseleksi */
+}
+
+.prev-button {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next-button {
+    right: 0;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
