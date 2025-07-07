@@ -106,21 +106,24 @@
                     <ul>
                         <li>Memperoleh pendanaan untuk inovasi IoT pada hewan peliharaan, terpilih dari <strong>42.000+ proposal</strong> secara nasional.</li>
                         <li>Menyusun strategi pengembangan produk end-to-end dengan <i>design thinking</i> untuk integrasi hardware-software, memantau progres, dan menyelesaikan MVP dalam 8 bulan.</li>
-                        <li>Mendesain UI/UX aplikasi mobile fungsional (7 halaman) menggunakan Figma dan mempresentasikannya pada sesi evaluasi bersama tim Kemendikbudristik.</li>
+                        <li>Mendesain UI/UX aplikasi mobile fungsional (7 halaman) menggunakan Figma dan mempresentasikannya pada sesi evaluasi bersama tim Kemendikbudristek.</li>
                     </ul>
                 </div>
             </div>
         </div> 
-        <div class="slider-container">
-            <div class="slider">
-                <img src="images/pkm_foto3.png" alt="Dokumentasi PKM-KC 1">
-                <img src="images/pkm_foto4.png" alt="Dokumentasi PKM-KC 2">
-                <img src="images/pkm_foto5.png" alt="Dokumentasi PKM-KC 3">
-                <img src="images/pkm_foto1.jpg" alt="Dokumentasi PKM-KC 4">
-                <img src="images/pkm_foto2.jpg" alt="Dokumentasi PKM-KC 5">
+
+        <div class="slider-wrapper">
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/pkm_foto1.jpg" alt="Dokumentasi PKM-KC 1">
+                    <img src="images/pkm_foto2.jpg" alt="Dokumentasi PKM-KC 2">
+                    <img src="images/pkm_foto3.jpg" alt="Dokumentasi PKM-KC 3">
+                    <img src="images/pkm_foto4.jpg" alt="Dokumentasi PKM-KC 4">
+                    <img src="images/pkm_foto5.jpg" alt="Dokumentasi PKM-KC 5">
+                </div>
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
             </div>
-            <button class="prev-button" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next-button" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </div>
 </section>
@@ -129,6 +132,7 @@
     <div class="content">
         <p class="section-super-header">EXPERIENCES</p>
         <h2>Pengalaman Profesional</h2>
+        
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
@@ -143,6 +147,17 @@
                         <li>Mengelola UI/UX testing pada MartiShop, mengusulkan perbaikan fitur, dan berhasil melakukan <strong>onboarding 2 tenant baru</strong>.</li>
                         <li>Mengelola proses vendor assessment untuk proyek PPOB dan melakukan audit teknis pada vendor Telco.</li>
                     </ul>
+
+                    <div class="slider-wrapper">
+                        <div class="slider-container">
+                            <div class="slider">
+                                <img src="images/mrt_foto1.jpg" alt="Pengalaman di MRT Jakarta 1">
+                                <img src="images/mrt_foto2.jpg" alt="Pengalaman di MRT Jakarta 2">
+                            </div>
+                            <button class="prev-button">&#10094;</button>
+                            <button class="next-button">&#10095;</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
@@ -152,32 +167,56 @@
 ...
     </section>
 
-    <script>
-        let slideIndex = 0;
-        const slider = document.querySelector('.slider');
-        const slides = document.querySelectorAll('.slider img');
-        const totalSlides = slides.length;
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cari semua slider wrapper di halaman
+            const sliderWrappers = document.querySelectorAll('.slider-wrapper');
 
-        // Tampilkan slide pertama saat halaman dimuat
-        showSlide(slideIndex);
+            // Untuk setiap slider, jalankan fungsi inisialisasi
+            sliderWrappers.forEach(wrapper => {
+                initializeSlider(wrapper);
+            });
+        });
 
-        function moveSlide(n) {
-            slideIndex += n;
-            showSlide(slideIndex);
-        }
+        function initializeSlider(wrapper) {
+            let slideIndex = 0;
+            const slider = wrapper.querySelector('.slider');
+            const slides = wrapper.querySelectorAll('.slider img');
+            const prevButton = wrapper.querySelector('.prev-button');
+            const nextButton = wrapper.querySelector('.next-button');
+            const totalSlides = slides.length;
 
-        function showSlide(n) {
-            if (n >= totalSlides) {
-                slideIndex = 0; // Kembali ke slide pertama
+            if (totalSlides <= 1) {
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+                return;
             }
-            if (n < 0) {
-                slideIndex = totalSlides - 1; // Pergi ke slide terakhir
+
+            // Fungsi untuk update posisi slider
+            function showSlide(n) {
+                if (n >= totalSlides) {
+                    slideIndex = 0;
+                } else if (n < 0) {
+                    slideIndex = totalSlides - 1;
+                } else {
+                    slideIndex = n;
+                }
+                slider.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
             }
-            
-            // Geser kontainer slider
-            slider.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+
+            // Tambahkan event listener untuk tombol
+            prevButton.addEventListener('click', function() {
+                showSlide(slideIndex - 1);
+            });
+
+            nextButton.addEventListener('click', function() {
+                showSlide(slideIndex + 1);
+            });
+
+            // Tampilkan slide pertama
+            showSlide(0);
         }
     </script>
-
+    
 </body>
 </html>
