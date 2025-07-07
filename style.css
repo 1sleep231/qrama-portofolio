@@ -249,7 +249,6 @@ body {
     position: relative;
     width: 100%;
     max-width: 600px; /* Ukuran lebar maksimum slider diperkecil */
-    aspect-ratio: 16 / 9; /* Menjaga rasio lebar:tinggi agar konsisten */
     margin: 30px auto 0;
     overflow: hidden;
     border-radius: 10px;
@@ -263,9 +262,9 @@ body {
 
 .slider img {
     width: 100%;
-    height: 100%;
+    height: 450px;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Tombol Prev & Next */
