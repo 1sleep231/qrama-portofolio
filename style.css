@@ -249,7 +249,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 600px; /* Ukuran lebar maksimum slider diperkecil */
-    margin: 30px auto 0;
+    margin: 10px auto 0;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
