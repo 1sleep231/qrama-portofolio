@@ -118,6 +118,37 @@
             <p>Jelaskan pengalaman magang, organisasi, atau kepanitiaan Anda di sini. Fokus pada peran dan tanggung jawab yang relevan dengan bidang data.</p>
         </div>
     </section>
+...
+    </section>
 
+    <script>
+        let slideIndex = 0;
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+
+        // Tampilkan slide pertama saat halaman dimuat
+        showSlide(slideIndex);
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlide(slideIndex);
+        }
+
+        function showSlide(n) {
+            if (n >= totalSlides) {
+                slideIndex = 0; // Kembali ke slide pertama
+            }
+            if (n < 0) {
+                slideIndex = totalSlides - 1; // Pergi ke slide terakhir
+            }
+            
+            // Geser kontainer slider
+            slider.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        }
+    </script>
+
+</body>
+</html>
 </body>
 </html>
