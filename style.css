@@ -56,7 +56,7 @@ body {
     display: flex;
     flex-direction: column; /* Mengatur item agar tersusun vertikal */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 120px 10% 40px;
 }
 
