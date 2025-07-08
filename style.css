@@ -252,21 +252,6 @@ body {
     margin-bottom: 25px; /* Mengurangi jarak bawah antar item */
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 18px; /* mulai dari tengah dot */
-    bottom: -25px; /* agar garis muncul ke item berikutnya */
-    width: 2px;
-    background-color: #e1e8ed;
-}
-
-/* Menghilangkan garis pada item terakhir */
-.timeline-item:last-child::before {
-    display: none;
-}
-
 .timeline-dot {
     position: absolute;
     left: 0;
@@ -397,3 +382,15 @@ body {
     letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 17px; /* Tengah dari timeline-dot (18px + border 3px) */
+    width: 2px;
+    height: 100%;
+    background-color: #e1e8ed;
+    z-index: 0;
+}
+
