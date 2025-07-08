@@ -254,7 +254,7 @@ body {
 
 .timeline-dot {
     position: absolute;
-    left: 3px;
+    left: 8px;
     top: 5px;
     width: 18px;
     height: 18px;
@@ -387,7 +387,7 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    left: 12px; /* Tengah dari timeline-dot (18px + border 3px) */
+    left: 17px; /* Tengah dari timeline-dot (18px + border 3px) */
     width: 2px;
     height: 100%;
     background-color: #e1e8ed;
