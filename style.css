@@ -238,20 +238,20 @@ body {
     color: #6c757d;
 }
 
-/* ===== CSS UNTUK TIMELINE EXPERIENCES & COMPETITIONS ===== */
+/* ===== CSS UNTUK TIMELINE EXPERIENCES & COMPETITIONS (REVISI FINAL) ===== */
 .timeline {
     position: relative;
     width: 100%;
     margin-top: 40px;
-    padding-left: 0;
 }
 
+/* Garis vertikal utama, dikembalikan ke sini */
 .timeline::before {
     content: '';
     position: absolute;
     left: 8px;
     top: 5px;
-    bottom: 5px;
+    height: calc(100% - 50px); /* Berhenti sebelum item terakhir */
     width: 2px;
     background-color: #e1e8ed;
 }
@@ -262,6 +262,11 @@ body {
     padding-left: 45px;
 }
 
+/* Menghilangkan garis ::before dari item */
+.timeline-item::before {
+    display: none;
+}
+
 .timeline-dot {
     position: absolute;
     left: 0;
@@ -269,13 +274,18 @@ body {
     width: 18px;
     height: 18px;
     background-color: #0056b3;
-    border: 3px solid #f0f5fa;
+    border: 3px solid #ffffff; /* Disesuaikan dengan background section */
     border-radius: 50%;
     z-index: 10;
 }
 
 .timeline-content {
     text-align: left;
+}
+
+.timeline-text-content {
+    /* Konten teks dibungkus agar slider tidak mempengaruhi tinggi garis */
+    padding-bottom: 20px;
 }
 
 .timeline-date {
