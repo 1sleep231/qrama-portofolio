@@ -273,15 +273,15 @@ body {
     padding-bottom: 25px; /* Jarak antara akhir teks dengan slider */
 }
 
-/* Garis timeline sekarang menempel di sini, tingginya akan pas */
 .timeline-main-content::before {
     content: '';
     position: absolute;
-    left: -28px; /* Dihitung agar pas di tengah titik */
-    top: 5px;
-    height: 100%; /* Tinggi 100% dari .timeline-main-content */
+    left: -37px; /* Posisi horizontal garis */
+    top: 20px;   /* Posisi awal garis (di bawah titik) */
+    height: 250px; /* TINGGI GARIS DIBUAT TETAP, BISA DISESUAIKAN */
     width: 2px;
     background-color: #e1e8ed;
+    z-index: -1; /* Memastikan garis di belakang titik */
 }
 
 /* Menghilangkan garis pada item terakhir */
