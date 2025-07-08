@@ -277,7 +277,7 @@ body {
 .timeline-main-content::before {
     content: '';
     position: absolute;
-    left: -37px; /* Dihitung agar pas di tengah titik */
+    left: -28px; /* Dihitung agar pas di tengah titik */
     top: 5px;
     height: 100%; /* Tinggi 100% dari .timeline-main-content */
     width: 2px;
