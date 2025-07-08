@@ -64,6 +64,10 @@ body {
     padding: 120px 10% 60px; /* Menambah padding bawah */
 }
 
+#about.section {
+    padding-bottom: 30px;
+}
+
 /* Section Ganjil - Putih */
 #home, #portfolio, #experiences {
     background-color: #ffffff; 
