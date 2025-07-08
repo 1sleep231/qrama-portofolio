@@ -1,5 +1,5 @@
 /* ======================================== */
-/* KODE CSS FINAL - 5 JULI 2024        */
+/* KODE CSS FINAL & BERSIH                  */
 /* ======================================== */
 
 /* ===== PENGATURAN DASAR & FONT ===== */
@@ -60,8 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* PERBAIKAN UTAMA: KONTEN DIMULAI DARI ATAS */
-    padding: 120px 10% 40px;
+    justify-content: flex-start;
+    padding: 120px 10% 60px; /* Menambah padding bawah */
 }
 
 /* Section Ganjil - Putih */
@@ -238,17 +238,34 @@ body {
     color: #6c757d;
 }
 
-/* ===== CSS UNTUK TIMELINE (REVISI FINAL & PASTI) ===== */
+/* ===== CSS UNTUK TIMELINE ===== */
 .timeline {
     position: relative;
     width: 100%;
     margin-top: 40px;
+    text-align: left;
 }
 
 .timeline-item {
     position: relative;
     padding-left: 45px;
-    margin-bottom: 40px;
+    margin-bottom: 25px; /* Mengurangi jarak bawah antar item */
+}
+
+/* Garis Timeline */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #e1e8ed;
+}
+
+/* Menghilangkan garis pada item terakhir */
+.timeline-item:last-child::before {
+    display: none;
 }
 
 .timeline-dot {
@@ -258,35 +275,18 @@ body {
     width: 18px;
     height: 18px;
     background-color: #0056b3;
-    border: 3px solid #ffffff; /* Sesuaikan dengan warna background section */
-    border-radius: 50%;
+    /* Sesuaikan warna border dengan background section tempat timeline berada */
+    border: 3px solid #ffffff; /* Untuk experiences */
     z-index: 10;
+    border-radius: 50%;
+}
+
+#competitions .timeline-dot {
+    border-color: #f0f5fa; /* Untuk competitions */
 }
 
 .timeline-content {
-    text-align: left;
-}
-
-/* Wrapper baru untuk teks, yang akan memiliki garis */
-.timeline-main-content {
-    position: relative;
-    padding-bottom: 25px; /* Jarak antara akhir teks dengan slider */
-}
-
-.timeline-main-content::before {
-    content: '';
-    position: absolute;
-    left: -37px; /* Posisi horizontal garis */
-    top: 20px;   /* Posisi awal garis (di bawah titik) */
-    height: 250px; /* TINGGI GARIS DIBUAT TETAP, BISA DISESUAIKAN */
-    width: 2px;
-    background-color: #e1e8ed;
-    z-index: -1; /* Memastikan garis di belakang titik */
-}
-
-/* Menghilangkan garis pada item terakhir */
-.timeline-item:last-child .timeline-main-content::before {
-    display: none;
+    padding-bottom: 20px;
 }
 
 .timeline-date {
@@ -333,12 +333,17 @@ body {
     font-size: 20px;
 }
 
-/* ===== CSS UNTUK SLIDER GAMBAR DI SECTION COMPETITIONS ===== */
+/* ===== CSS UNTUK SLIDER GAMBAR ===== */
+.slider-wrapper {
+    margin-top: 25px; /* Jarak antara deskripsi timeline/paragraf dengan slider */
+}
+
 .slider-container {
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin: 15px auto 0;
+    margin-left: 0; /* Slider dimulai dari kiri, tidak di tengah */
+    margin-right: auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
