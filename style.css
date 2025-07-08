@@ -342,8 +342,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin-left: 0; /* Slider dimulai dari kiri, tidak di tengah */
-    margin-right: auto;
+    margin: 0 auto; /* INI KODENYA AGAR KEMBALI KE TENGAH */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
