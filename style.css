@@ -238,33 +238,17 @@ body {
     color: #6c757d;
 }
 
-/* ===== CSS UNTUK TIMELINE EXPERIENCES & COMPETITIONS (REVISI FINAL) ===== */
+/* ===== CSS UNTUK TIMELINE (REVISI FINAL & PASTI) ===== */
 .timeline {
     position: relative;
     width: 100%;
     margin-top: 40px;
 }
 
-/* Garis vertikal utama, dikembalikan ke sini */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 5px;
-    height: calc(100% - 50px); /* Berhenti sebelum item terakhir */
-    width: 2px;
-    background-color: #e1e8ed;
-}
-
 .timeline-item {
     position: relative;
-    margin-bottom: 40px;
     padding-left: 45px;
-}
-
-/* Menghilangkan garis ::before dari item */
-.timeline-item::before {
-    display: none;
+    margin-bottom: 40px;
 }
 
 .timeline-dot {
@@ -274,7 +258,7 @@ body {
     width: 18px;
     height: 18px;
     background-color: #0056b3;
-    border: 3px solid #ffffff; /* Disesuaikan dengan background section */
+    border: 3px solid #ffffff; /* Sesuaikan dengan warna background section */
     border-radius: 50%;
     z-index: 10;
 }
@@ -283,9 +267,26 @@ body {
     text-align: left;
 }
 
-.timeline-text-content {
-    /* Konten teks dibungkus agar slider tidak mempengaruhi tinggi garis */
-    padding-bottom: 20px;
+/* Wrapper baru untuk teks, yang akan memiliki garis */
+.timeline-main-content {
+    position: relative;
+    padding-bottom: 25px; /* Jarak antara akhir teks dengan slider */
+}
+
+/* Garis timeline sekarang menempel di sini, tingginya akan pas */
+.timeline-main-content::before {
+    content: '';
+    position: absolute;
+    left: -37px; /* Dihitung agar pas di tengah titik */
+    top: 5px;
+    height: 100%; /* Tinggi 100% dari .timeline-main-content */
+    width: 2px;
+    background-color: #e1e8ed;
+}
+
+/* Menghilangkan garis pada item terakhir */
+.timeline-item:last-child .timeline-main-content::before {
+    display: none;
 }
 
 .timeline-date {
