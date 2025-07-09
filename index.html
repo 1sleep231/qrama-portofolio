@@ -22,6 +22,14 @@
             <a href="#competitions">🏆Competitions</a>
             <a href="#experiences">💼Experiences</a>
         </nav>
+         <div class="dark-mode-toggle">
+            <input type="checkbox" id="darkSwitch" />
+            <label for="darkSwitch" class="toggle-label">
+                <span class="toggle-ball"></span>
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </label>
+        </div>
     </header>
 
     <section id="home" class="section">
@@ -33,7 +41,7 @@
                 <h2><br><i>Saya membantu bisnis membuat keputusan berbasis data, dengan keahlian Python, SQL, dan storytelling visual✨.</br></i></h2>
             </div>
             <div class="home-photo">
-                <img src="images/home.jpeg" alt="">
+                <img src="images/home3.jpeg" alt="">
             </div>
         </div>
     </section>
@@ -287,5 +295,27 @@
         }
     </script>
     
+    <script>
+    // Dark mode toggle logic
+        const darkSwitch = document.getElementById('darkSwitch');
+        const body = document.body;
+        // Load preference
+        if(localStorage.getItem('dark-mode') === 'enabled'){
+            body.classList.add('dark-mode');
+            if(darkSwitch) darkSwitch.checked = true;
+        }
+        if(darkSwitch){
+            darkSwitch.addEventListener('change', function(){
+                if(this.checked){
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('dark-mode', 'enabled');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('dark-mode', 'disabled');
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
