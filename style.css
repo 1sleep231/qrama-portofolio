@@ -1,0 +1,580 @@
+/* ======================================== */
+/* KODE CSS FINAL & BERSIH                  */
+/* ======================================== */
+
+/* ===== PENGATURAN DASAR & FONT ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== CSS VARIABLES UNTUK DARK MODE ===== */
+:root {
+    --header-bg: #ffffff;
+    --primary-text: #2c3e50;
+    --secondary-text: #6c757d;
+    --accent: #0056b3;
+    --card-bg: #ffffff;
+    --card-border: #e1e8ed;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --shadow-hover: rgba(0, 86, 179, 0.1);
+    
+    /* Background untuk section selang-seling */
+    --section-odd-bg: #ffffff;    /* Home, Portfolio, Experiences */
+    --section-even-bg: #f0f5fa;   /* About, Competitions */
+    --timeline-line: #e1e8ed;
+}
+
+body.dark-mode {
+    --header-bg: #23262f;
+    --primary-text: #f1f1f1;
+    --secondary-text: #b8bcc5;
+    --accent: #00c6ad;
+    --card-bg: #23262f;
+    --card-border: #3a3d47;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --shadow-hover: rgba(0, 198, 173, 0.2);
+    
+    /* Background untuk section selang-seling dalam dark mode */
+    --section-odd-bg: #181a20;    /* Home, Portfolio, Experiences */
+    --section-even-bg: #1e2028;   /* About, Competitions */
+    --timeline-line: #3a3d47;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--section-odd-bg);
+    color: var(--primary-text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== HEADER / NAVIGATION BAR ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--primary-text);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+/* ===== PENGATURAN UMUM UNTUK SETIAP SECTION ===== */
+.section {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 10% 30px;
+    transition: background 0.3s;
+}
+
+#about.section {
+    min-height: auto;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#portfolio.section {
+    padding-top: 30px;
+}
+
+#competitions.section {
+    padding-top: 30px;
+}
+
+#experiences.section {
+    padding-top: 30px;
+}
+
+/* Section Ganjil - Warna Utama */
+#home, #portfolio, #experiences {
+    background-color: var(--section-odd-bg) !important;
+}
+
+/* Section Genap - Warna Alternatif */
+#about, #competitions {
+    background-color: var(--section-even-bg) !important;
+}
+
+.content {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--primary-text);
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--primary-text);
+}
+
+/* ===== CSS UNTUK HOME SECTION BARU ===== */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+#home.section {
+    padding-bottom: 50px;
+}
+
+.home-text {
+    flex: 1.5;
+    text-align: left;
+}
+
+.home-text .greeting {
+    color: var(--accent);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.home-text h1 {
+    font-size: 60px;
+    margin: 5px 0;
+    color: var(--primary-text);
+}
+
+.home-text h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--secondary-text);
+}
+
+.home-photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-photo img {
+    width: 350px;
+    height: 350px;
+    border-radius: 60%;
+    object-fit: cover;
+    border: 5px solid var(--accent);
+}
+
+/* ===== CSS UNTUK ABOUT SECTION BARU ===== */
+.section-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.about-column h2 {
+    color: var(--primary-text);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-column p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.7;
+    color: var(--primary-text);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--primary-text);
+    font-size: 32px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+    transform: translateY(-5px);
+}
+
+/* ===== PORTFOLIO SECTION STYLING ===== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 8px var(--shadow);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px var(--shadow-hover);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.project-info h3 a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.project-info h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: var(--secondary-text);
+}
+
+/* ===== CSS UNTUK TIMELINE ===== */
+.timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 25px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 9.5px;
+    top: 1.8px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--accent);
+    border: 3px solid var(--section-odd-bg); /* Default untuk experiences */
+    z-index: 1;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Timeline dot untuk section competitions (background berbeda) */
+#competitions .timeline-dot {
+    border-color: var(--section-even-bg);
+}
+
+.timeline-content {
+    padding-bottom: 20px;
+}
+
+.timeline-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    color: var(--primary-text);
+    margin-bottom: 5px;
+}
+
+.timeline-company {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline-content ul li {
+    font-size: 16px;
+    color: var(--secondary-text);
+    line-height: 1.7;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-content ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 17px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--timeline-line);
+    z-index: 0;
+    transition: background-color 0.3s;
+}
+
+/* ===== CSS UNTUK SLIDER GAMBAR ===== */
+.slider-wrapper {
+    margin-top: 25px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px var(--shadow);
+    transition: box-shadow 0.3s;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    max-height: 450px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.prev-button {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next-button {
+    right: 0;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ===== CSS UNTUK HEADER KECIL SETIAP SECTION ===== */
+.section-super-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 150px;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-hover);
+}
+
+.skill-card .skill-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+/* ===== DARK MODE TOGGLE ===== */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: var(--card-border);
+    border-radius: 20px;
+    width: 50px;
+    height: 26px;
+    position: relative;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.toggle-label .toggle-ball {
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+    z-index: 2;
+}
+
+#darkSwitch:checked + .toggle-label .toggle-ball {
+    transform: translateX(24px);
+    background: #ffd600;
+}
+
+.toggle-label .fa-moon, .toggle-label .fa-sun {
+    font-size: 14px;
+    position: absolute;
+    top: 6px;
+    color: #888;
+    z-index: 1;
+}
+
+.toggle-label .fa-moon { left: 8px; }
+.toggle-label .fa-sun { right: 8px; }
+#darkSwitch { display: none; }
+
+/* ===== SKILLS SECTION FIX (SAFE) ===== */
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.skill-category {
+    text-align: center;
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.skill-category .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 26px;
+    justify-items: center;
+}
+
+.skill-category .skill-card {
+    width: 140px;
+    height: 140px;
+}
