@@ -578,3 +578,218 @@ body {
     width: 140px;
     height: 140px;
 }
+
+/* ===== STATS STRIP ===== */
+.stats-strip-section {
+    background-color: var(--accent);
+    width: 100%;
+}
+
+.stats-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 28px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 4px;
+    letter-spacing: 0.3px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== FEATURED BADGE ===== */
+.project-card {
+    position: relative;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    z-index: 10;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== PROJECT THUMBNAIL WITH HOVER OVERLAY ===== */
+.project-thumb-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+    display: block;
+}
+
+.project-thumb-wrap:hover .project-thumb {
+    transform: scale(1.05);
+}
+
+.thumb-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 24px 14px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.project-thumb-wrap:hover .thumb-overlay {
+    opacity: 1;
+}
+
+.thumb-overlay i {
+    margin-right: 6px;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-modal {
+    position: relative;
+    max-width: 900px;
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-img-wrap {
+    width: 100%;
+    max-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+}
+
+#lightbox-img {
+    max-width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: opacity 0.15s ease;
+}
+
+.lightbox-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 4px 0;
+}
+
+#lightbox-caption {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+#lightbox-counter {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    white-space: nowrap;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 6px 10px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 14px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s;
+    z-index: 10;
+}
+
+.lightbox-prev { left: -60px; }
+.lightbox-next { right: -60px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255,255,255,0.25);
+}
+

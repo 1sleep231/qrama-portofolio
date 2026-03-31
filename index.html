@@ -46,6 +46,31 @@
         </div>
     </section>
 
+    <!-- STATS STRIP -->
+    <section id="showcase" class="stats-strip-section">
+        <div class="stats-strip">
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Data Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Automated Pipelines</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">100K+</span>
+                <span class="stat-label">Records Analyzed</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Industries Analyzed</span>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="section">
         <div class="section-wrapper">
             <p class="section-super-header">ABOUT ME</p>
@@ -167,7 +192,15 @@
 
                 <!-- PROJECT 1: Customer Churn -->
                 <div class="project-card">
-                    <img src="images/foto-1.png" alt="Screenshot Proyek 1">
+                    <!-- <div class="featured-badge">⭐ Featured Project</div> -->
+                    <div class="project-thumb-wrap" onclick="openLightbox([
+                        {src:'images/foto-1.png', caption:'Customer Churn — Model Overview'},
+                        {src:'images/foto-1b.png', caption:'Customer Churn — Model Comparison'},
+                        {src:'images/foto-1c.png', caption:'Customer Churn — Flask App'}
+                    ])">
+                        <img src="images/foto-1.png" alt="Customer Churn Preview" class="project-thumb">
+                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
+                    </div>
                     <div class="project-info">
                         <h3>
                             <a href="https://github.com/1sleep231/Customer_Churn" target="_blank">
@@ -176,57 +209,70 @@
                         </h3>
 
                         <p><strong>Problem:</strong><br>
-                            Bank kehilangan nasabah tanpa tahu siapa yang berisiko pergi atau faktor apa yang mendorongnya,
-                            sehingga membuat program retensi berjalan buta dan tidak efisien.
+                            Bank kehilangan nasabah tanpa sistem peringatan dini — strategi retensi berjalan reaktif,
+                            padahal biaya akuisisi nasabah baru 5–25× lebih mahal daripada mempertahankan yang sudah ada.
                         </p>
 
                         <p><strong>Approach:</strong><br>
-                            Membangun model klasifikasi (Random Forest & Logistic Regression) menggunakan Python dan Scikit-learn, 
-                            dengan feature engineering dari 10+ variabel perilaku nasabah untuk memprediksi probabilitas churn per individu.
+                            Membangun end-to-end ML pipeline: EDA → feature engineering → perbandingan 4 model (Logistic Regression, Random Forest, SVC, LightGBM)
+                            → deployment sebagai aplikasi web via Flask yang bisa menerima input data nasabah dan menghasilkan prediksi churn secara real-time.
                         </p>
 
                         <p><strong>Key Insights:</strong><br>
-                            Nasabah dengan tenure kurang dari 2 tahun dan frekuensi transaksi rendah memiliki probabilitas churn 3 kali lebih tinggi. 
-                            Model mencapai akurasi 86% dengan AUC-ROC 0.89, artinya model mampu memprioritaskan nasabah berisiko secara andal.
+                            EDA mengungkap pola yang tidak obvious: nasabah dengan saldo tinggi justru lebih berisiko churn (bukan yang saldo rendah),
+                            nasabah dengan lebih dari 2 produk menunjukkan risiko meningkat, dan nasabah di Jerman memiliki tingkat churn signifikan lebih tinggi dibanding negara lain.
+                            <br>
+                            Dipilih dua model untuk dua skenario bisnis berbeda — SVC (Recall 0.77) untuk strategi retensi agresif yang memprioritaskan tidak melewatkan satu pun nasabah berisiko,
+                            dan LightGBM untuk efisiensi budget kampanye dengan meminimalkan false positive.
                         </p>
                         
                         <p><strong>Business Impact:</strong><br>
-                            Dengan menarget 20% nasabah berisiko tinggi terlebih dahulu, bank dapat mengalokasikan budget retensi secara efisien, 
-                            sehingga mengurangi ketergantungan pada akuisisi nasabah baru yang biayanya 5 kali lebih mahal.
+                            Model memungkinkan tim retensi bergerak proaktif — mengidentifikasi nasabah berisiko sebelum mereka pergi, bukan setelah.
+                            Aplikasi Flask membuktikan kemampuan membawa model dari notebook ke sistem yang bisa digunakan langsung oleh tim bisnis.
                         </p>
 
-                        <p><strong>Tools:</strong> Python, Pandas, Scikit-learn</p>
+                        <p><strong>Tools:</strong> Python, Scikit-Learn, LightGBM, Flask</p>
                     </div>
                 </div>
 
                 <!-- PROJECT 2: Mall Customer Segmentation -->
                 <div class="project-card">
-                    <img src="images/foto-2.png" alt="Screenshot Proyek 2">
+                    <div class="project-thumb-wrap" onclick="openLightbox([
+                        {src:'images/foto-2.png', caption:'Mall Segmentation — Cluster Overview'},
+                        {src:'images/foto-2b.png', caption:'Mall Segmentation — 3D Visualization'},
+                        {src:'images/foto-2c.png', caption:'Mall Segmentation — Segment Profiles'}
+                    ])">
+                        <img src="images/foto-2.png" alt="Mall Segmentation Preview" class="project-thumb">
+                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
+                    </div>
                     <div class="project-info">
                         <h3>
                             <a href="https://github.com/1sleep231/Customer_Segmen" target="_blank">
-                                Mall Customer Segmentation: Who is our actual customer?
+                                Mall Customer Segmentation: Who is our actual customer & How we treat them?
                             </a>
                         </h3>
 
                         <p><strong>Problem:</strong><br>
-                            Mall menjalankan program promosi yang sama untuk semua pelanggan. 
-                            Pendekatan one-size-fits-all menyebabkan konversi rendah dan anggaran marketing tidak efisien.
+                            Mall memperlakukan 200 pelanggan dengan cara yang sama persis — satu campaign untuk semua.
+                            Tanpa segmentasi berbasis data, budget marketing tersebar merata ke pelanggan yang responsnya sangat berbeda, sehingga conversion rendah dan ROI tidak optimal.
                         </p> 
 
                         <p><strong>Approach:</strong><br>
-                            Menerapkan K-Means Clustering untuk mengelompokkan 200 pelanggan berdasarkan pendapatan tahunan, usia, dan spending score, 
-                            dilengkapi visualisasi interaktif untuk interpretasi segmen.
+                            Menerapkan K-Means Clustering dengan Elbow Method untuk menentukan jumlah cluster optimal (k=5), dianalisis dari tiga sudut pandang: Age vs Spending Score, Income vs Spending Score,
+                            dan 3D clustering (Income × Age × Spending Score) dengan visualisasi interaktif via Plotly.
                         </p>
 
                         <p><strong>Key Insights:</strong><br>
-                            Ditemukan 5 segmen distinct yang sebelumnya diperlakukan sama oleh tim marketing. Segmen "High Earner, Low Spender" mengindikasikan potensi upsell terbesar, 
-                            sementara "Young High Spender" adalah target prioritas untuk loyalty program.
+                            Dari data 200 pelanggan, ditemukan 5 profil yang sebelumnya diperlakukan identik oleh tim marketing: Affluent Spenders (income tinggi, spending tinggi
+                            — target utama loyalty program), Wealthy Cautious (income tinggi tapi spending rendah — perlu strategi aktivasi khusus), Young Enthusiasts (usia muda, spending tinggi — responsif terhadap promo digital agresif), Balanced Traditionalists (moderat & stabil — backbone revenue jangka panjang), dan Frugal Seniors (low priority untuk campaign intensif).
                         </p>
 
                         <p><strong>Business Impact:</strong><br>
-                            Strategi marketing berbasis segmen berpotensi meningkatkan conversion rate campaign hingga 2 sampai 3 kali dibanding pendekatan sebelumnya, 
-                            dengan alokasi budget yang lebih tepat sasaran per kelompok pelanggan.
+                           Insight ini menghasilkan 4 rekomendasi berbeda untuk 4 segmen berbeda — bukan satu kampanye generik. Wealthy Cautious adalah peluang terbesar yang tersembunyi:
+                           income tinggi tapi spending rendah mengindikasikan ada barrier yang bisa diintervensi dengan personalized campaign.
+                            <br>
+                           Dengan strategi berbasis segmen, alokasi budget marketing bisa diprioritaskan ke Affluent Spenders dan Young Enthusiasts yang memiliki spending propensity tertinggi
+                           — berpotensi meningkatkan conversion rate campaign 2–3× dibanding pendekatan one-size-fits-all sebelumnya.
                         </p>
 
                         <p><strong>Tools:</strong> Python, pandas, Scikit-learn, Seaborn, Plotly</p>
@@ -235,32 +281,42 @@
 
                 <!-- PROJECT 3: E-COMMERCE DATASET ANALYSIS -->
                 <div class="project-card">
-                    <img src="images/foto-4.jpg" alt="Screenshot Proyek 3">
+                    <div class="project-thumb-wrap" onclick="openLightbox([
+                        {src:'images/foto-4.jpg', caption:'E-Commerce — Geographic Map'},
+                        {src:'images/foto-4b.png', caption:'E-Commerce — AOV by State'},
+                        {src:'images/foto-4c.png', caption:'E-Commerce — Order Distribution'}
+                    ])">
+                        <img src="images/foto-4.jpg" alt="E-Commerce Preview" class="project-thumb">
+                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
+                    </div>
                     <div class="project-info">
                         <h3>
                             <a href="https://colab.research.google.com/drive/1P2NYQGAVuozA3Fe0CVC28eGYEHDxuntU?usp=sharing" target="_blank">
-                                E-commerce Regional Analysis: Uncovering Hidden Revenue Opportunities in Brazil's Underpenetrated Markets
+                                E-Commerce Geographic Analysis — Volume Tinggi Belum Tentu Nilai Tinggi
                             </a>
                         </h3>
 
                         <p><strong>Problem:</strong><br>
-                            Perusahaan e-commerce yang beroperasi di 26 negara bagian Brazil tidak memiliki visibilitas: 
-                            wilayah mana yang underserved dan di mana opportunity revenue terbesar yang belum dioptimalkan?
+                           Platform e-commerce Brasil beroperasi di 26+ negara bagian tanpa visibilitas yang jelas:
+                           apakah strategi yang sama efektif untuk semua wilayah? Di mana sebenarnya pasar bernilai tinggi yang selama ini tersembunyi di balik dominasi volume São Paulo?
                         </p>
 
                         <p><strong>Approach:</strong><br>
-                            Menganalisis 100.000+ transaksi (2016–2018) dengan pemetaan geografis, analisis distribusi nilai pesanan per wilayah, 
-                            dan perbandingan Average Order Value (AOV) antarnegara bagian.
+                           Menganalisis ~100.000 transaksi dari 9 tabel relasional dataset Olist (2016–2018), dengan fokus pada tiga pertanyaan bisnis: distribusi volume
+                           pesanan per negara bagian, perbedaan Average Order Value (AOV) antarwilayah, dan implikasi strategisnya — divisualisasikan dengan bar chart dan geographic map via GeoPandas.
                         </p>
 
                         <p><strong>Key Insights:</strong><br>
-                            São Paulo mendominasi volume pesanan (43% dari total), namun negara bagian seperti Roraima dan Amapá menunjukkan AOV 20–35% lebih tinggi, 
-                            pasar yang underpenetrated dengan spending power tersembunyi yang selama ini diabaikan.
+                            Ditemukan kontras yang menarik: São Paulo mendominasi volume pesanan secara nasional, namun AOV-nya justru termasuk rendah.
+                            Sebaliknya, negara bagian seperti Paraíba, Acre, dan Roraima memiliki volume kecil tapi AOV tertinggi — pasar high-value yang selama ini diperlakukan sama dengan pasar massal.
                         </p>
 
                         <p><strong>Business Impact:</strong><br>
-                            Rekomendasi: realokasi anggaran iklan ke negara bagian high-AOV berpotensi meningkatkan revenue per marketing dollar tanpa penambahan budget, 
-                                pertumbuhan efisien berbasis data wilayah.
+                            Dua strategi berbeda untuk dua tipe market: São Paulo → upselling dan product bundling untuk menaikkan nilai per transaksi;
+                            Paraíba, Acre, Roraima → produk premium dan exclusive offering, disertai optimasi logistik untuk membuka potensi pasar yang masih underpenetrated.
+                            <br>
+                            Realokasi strategi berbasis tipe market — bukan sekadar volume — memungkinkan platform memaksimalkan revenue per marketing dollar.
+                            Menarget wilayah high-value dengan pendekatan yang tepat berpotensi meningkatkan AOV nasional tanpa penambahan jumlah transaksi.
                         </p>
 
                         <p><strong>Tools:</strong> pandas, NumPy, Matplotlib, Seaborn, Geopandas</p>
@@ -269,7 +325,14 @@
 
                 <!-- PROJECT 4: DASHBOARDING -->
                 <div class="project-card">
-                    <img src="images/foto-3.png" alt="Screenshot Proyek 4">
+                    <div class="project-thumb-wrap" onclick="openLightbox([
+                        {src:'images/foto-3.png', caption:'Retail Dashboard — Main View'},
+                        {src:'images/foto-3b.png', caption:'Retail Dashboard — Sales Trend'},
+                        {src:'images/foto-3c.png', caption:'Retail Dashboard — Product Performance'}
+                    ])">
+                        <img src="images/foto-3.png" alt="Dashboard Preview" class="project-thumb">
+                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
+                    </div>
                     <div class="project-info">
                         <h3>
                             <a href="https://lookerstudio.google.com/reporting/5a86ac63-e482-47c2-8916-60b518606515" target="_blank">
@@ -374,6 +437,7 @@
                     <div class="slider">
                         <img src="images/mrt_foto1.jpeg" alt="Pengalaman di MRT Jakarta 1">
                         <img src="images/mrt_foto2.jpeg" alt="Pengalaman di MRT Jakarta 2">
+                        <img src="images/mrt_foto3.jpeg" alt="Pengalaman di MRT Jakarta 3">
                     </div>
                     <button class="prev-button">&#10094;</button>
                     <button class="next-button">&#10095;</button>
@@ -381,6 +445,22 @@
             </div>
         </div>
     </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightboxOnBg(event)">
+        <div class="lightbox-modal">
+            <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+            <button class="lightbox-prev" onclick="lightboxNav(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next" onclick="lightboxNav(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-img-wrap">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-footer">
+                <p id="lightbox-caption"></p>
+                <span id="lightbox-counter"></span>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -405,33 +485,73 @@
             }
 
             function showSlide(n) {
-                if (n >= totalSlides) {
-                    slideIndex = 0;
-                } else if (n < 0) {
-                    slideIndex = totalSlides - 1;
-                } else {
-                    slideIndex = n;
-                }
+                if (n >= totalSlides) { slideIndex = 0; }
+                else if (n < 0) { slideIndex = totalSlides - 1; }
+                else { slideIndex = n; }
                 slider.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
             }
 
-            prevButton.addEventListener('click', function() {
-                showSlide(slideIndex - 1);
-            });
-
-            nextButton.addEventListener('click', function() {
-                showSlide(slideIndex + 1);
-            });
-
+            prevButton.addEventListener('click', function() { showSlide(slideIndex - 1); });
+            nextButton.addEventListener('click', function() { showSlide(slideIndex + 1); });
             showSlide(0);
         }
+
+        // ===== LIGHTBOX =====
+        let lbImages = [];
+        let lbIndex = 0;
+
+        function openLightbox(images) {
+            lbImages = images;
+            lbIndex = 0;
+            renderLightbox();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeLightboxOnBg(e) {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        }
+
+        function lightboxNav(dir) {
+            lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+            renderLightbox();
+        }
+
+        function renderLightbox() {
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            const counter = document.getElementById('lightbox-counter');
+            img.style.opacity = '0';
+            setTimeout(() => {
+                img.src = lbImages[lbIndex].src;
+                img.onload = () => { img.style.opacity = '1'; };
+                caption.textContent = lbImages[lbIndex].caption;
+                counter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+                const prev = document.querySelector('.lightbox-prev');
+                const next = document.querySelector('.lightbox-next');
+                prev.style.display = lbImages.length <= 1 ? 'none' : '';
+                next.style.display = lbImages.length <= 1 ? 'none' : '';
+            }, 150);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') lightboxNav(1);
+            if (e.key === 'ArrowLeft') lightboxNav(-1);
+        });
     </script>
     
     <script>
     // Dark mode toggle logic
         const darkSwitch = document.getElementById('darkSwitch');
         const body = document.body;
-        // Load preference
         if(localStorage.getItem('dark-mode') === 'enabled'){
             body.classList.add('dark-mode');
             if(darkSwitch) darkSwitch.checked = true;
