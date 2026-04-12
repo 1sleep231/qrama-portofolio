@@ -1,573 +1,218 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Quinasa Rama</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Data Analyst specializing in Python, SQL, ML, and automated data pipelines. Fresh graduate with hands-on project experience across fintech, retail, and e-commerce.">
+  <meta name="author" content="Quinasa Rama">
+  <meta property="og:title" content="Quinasa Rama — Data Analyst Portfolio">
+  <meta property="og:description" content="Data Analyst specializing in Python, SQL, ML, and automated data pipelines. Fresh graduate with hands-on project experience across fintech, retail, and e-commerce.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1sleep231.github.io/">
+  <title>Quinasa Rama — Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header class="header">
-        <a href="#home" class="logo">🎯Portofolio - Quinasa Rama</a>
-        <nav class="navbar">
-            <a href="#home">🏠Home</a>
-            <a href="#about">👨‍💻About Me</a>
-            <a href="#portfolio">🛠️Portofolio</a>
-            <a href="#competitions">🏆Competitions</a>
-            <a href="#experiences">💼Experiences</a>
-        </nav>
-         <div class="dark-mode-toggle">
-            <input type="checkbox" id="darkSwitch" />
-            <label for="darkSwitch" class="toggle-label">
-                <span class="toggle-ball"></span>
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-            </label>
-        </div>
-    </header>
+<header>
+  <a href="index.html" class="logo">
+    <span class="logo-dot"></span>
+    Quinasa Rama
+  </a>
+  <nav>
+    <a href="index.html" class="active">Overview</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+  <a href="CV_Quinasa Rama.pdf" class="cv-btn">↓ Download CV</a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
 
-    <section id="home" class="section">
-        <div class="home-container">
-            <div class="home-text">
-                <p class="greeting">Halo!👋 Saya,</p>
-                <h1>Quinasa Rama</h1>
-                <h2><strong>Fresh Graduate in Digital Business | Data Analyst focused on Business Automation & Decision Support</strong></h2>
-                <h><br><i>Saya membantu bisnis membuat keputusan berbasis data, dengan keahlian Python, SQL, dan storytelling visual✨.</br></i></h2>
-            </div>
-            <div class="home-photo">
-                <img src="images/home3.jpeg" alt="">
-            </div>
-        </div>
-    </section>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="active">Overview</a>
+  <a href="projects.html" class="">Projects</a>
+  <a href="experience.html" class="">Experience</a>
+  <a href="extras.html" class="">Extras</a>
+</div>
 
-    <!-- STATS STRIP -->
-    <section id="showcase" class="stats-strip-section">
-        <div class="stats-strip">
-            <div class="stat-item">
-                <span class="stat-number">4</span>
-                <span class="stat-label">Data Projects</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">2</span>
-                <span class="stat-label">Automated Pipelines</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">100K+</span>
-                <span class="stat-label">Records Analyzed</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">4</span>
-                <span class="stat-label">Industries Analyzed</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="section-wrapper">
-            <p class="section-super-header">ABOUT ME</p>
-            <div class="about-container">
-                <div class="about-column">
-                    <h2>Get to Know Me!</h2>
-                    <p>
-                        Saya adalah <strong>Fresh Graduate S1 Bisnis Digital</strong> dengan fokus paada
-                        <strong>data analysis dan business insight</strong>.
-                        Berpengalaman mengolah data operasional dan bisnis menggunakan <strong>Python, SQL, dan BI Tools</strong> untuk menghasilkan insight yang mendukung
-                        pengambilan keputusan.
-                        Memiliki pengalaman nyata melalui proyek machine learning, dashboarding, serta internship di <strong>PT MRT Jakarta (Perseroda)</strong>.
-                </div>
-                <div class="about-column">
-                    <h2>Let's Connect!</h2>
-                    <p>
-                        Saya selalu terbuka untuk berdiskusi, berkolaborasi dalam proyek, atau sekadar berbagi ide. Jangan ragu untuk menghubungi saya melalui platform di bawah ini.
-                    </p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/lyvisml/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/1sleep231" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills" class="section">
-        <div class="content">
-            <p class="section-super-header">SKILLS & TOOLS</p>
-            <h2>Technical Expertise</h2>
-
-            <div class="skills-wrapper">
-
-                <div class="skill-category">
-                    <h3>Core Data Analytics</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-logo">
-                            <p>Python</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo">
-                            <p>SQL</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="skill-logo">
-                            <p>Pandas</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" class="skill-logo">
-                            <p>Excel</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Visualization & Business Intelligence</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" class="skill-logo">
-                            <p>Power BI</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Looker.svg" class="skill-logo">
-                            <p>Looker Studio</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" class="skill-logo">
-                            <p>Matplotlib</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Logo-seaborn.png" class="skill-logo">
-                            <p>Seaborn</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" class="skill-logo">
-                            <p>Scikit-learn</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Supporting Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="skill-logo">
-                            <p>GitHub</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skill-logo">
-                            <p>Figma</p>
-                        </div>
-                        <div class="skill-card">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/SPSS_An_IBM_Company_logo.svg" class="skill-logo">
-                            <p>SPSS</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="portfolio" class="section">
-        <div class="content">
-            <p class="section-super-header">PORTOFOLIO</p>
-            <h2>Project Case Studies</h2>
-            
-            <div class="portfolio-grid">
-
-                <!-- PROJECT 1: Customer Churn -->
-                <div class="project-card">
-                    <!-- <div class="featured-badge">⭐ Featured Project</div> -->
-                    <div class="project-thumb-wrap" onclick="openLightbox([
-                        {src:'images/foto-1.png', caption:'Customer Churn — Model Overview'},
-                        {src:'images/foto-1b.png', caption:'Customer Churn — Model Comparison'},
-                        {src:'images/foto-1c.png', caption:'Customer Churn — Flask App'}
-                    ])">
-                        <img src="images/foto-1.png" alt="Customer Churn Preview" class="project-thumb">
-                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>
-                            <a href="https://github.com/1sleep231/Customer_Churn" target="_blank">
-                                Customer Churn Prediction: Who's About to Leave and Why?
-                            </a>
-                        </h3>
-
-                        <p><strong>Problem:</strong><br>
-                            Bank kehilangan nasabah tanpa sistem peringatan dini — strategi retensi berjalan reaktif,
-                            padahal biaya akuisisi nasabah baru 5–25× lebih mahal daripada mempertahankan yang sudah ada.
-                        </p>
-
-                        <p><strong>Approach:</strong><br>
-                            Membangun end-to-end ML pipeline: EDA → feature engineering → perbandingan 4 model (Logistic Regression, Random Forest, SVC, LightGBM)
-                            → deployment sebagai aplikasi web via Flask yang bisa menerima input data nasabah dan menghasilkan prediksi churn secara real-time.
-                        </p>
-
-                        <p><strong>Key Insights:</strong><br>
-                            EDA mengungkap pola yang tidak obvious: nasabah dengan saldo tinggi justru lebih berisiko churn (bukan yang saldo rendah),
-                            nasabah dengan lebih dari 2 produk menunjukkan risiko meningkat, dan nasabah di Jerman memiliki tingkat churn signifikan lebih tinggi dibanding negara lain.
-                            <br>
-                            Dipilih dua model untuk dua skenario bisnis berbeda — SVC (Recall 0.77) untuk strategi retensi agresif yang memprioritaskan tidak melewatkan satu pun nasabah berisiko,
-                            dan LightGBM untuk efisiensi budget kampanye dengan meminimalkan false positive.
-                        </p>
-                        
-                        <p><strong>Business Impact:</strong><br>
-                            Model memungkinkan tim retensi bergerak proaktif — mengidentifikasi nasabah berisiko sebelum mereka pergi, bukan setelah.
-                            Aplikasi Flask membuktikan kemampuan membawa model dari notebook ke sistem yang bisa digunakan langsung oleh tim bisnis.
-                        </p>
-
-                        <p><strong>Tools:</strong> Python, Scikit-Learn, LightGBM, Flask</p>
-                    </div>
-                </div>
-
-                <!-- PROJECT 2: Mall Customer Segmentation -->
-                <div class="project-card">
-                    <div class="project-thumb-wrap" onclick="openLightbox([
-                        {src:'images/foto-2.png', caption:'Mall Segmentation — Cluster Overview'},
-                        {src:'images/foto-2b.png', caption:'Mall Segmentation — 3D Visualization'},
-                        {src:'images/foto-2c.png', caption:'Mall Segmentation — Segment Profiles'}
-                    ])">
-                        <img src="images/foto-2.png" alt="Mall Segmentation Preview" class="project-thumb">
-                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>
-                            <a href="https://github.com/1sleep231/Customer_Segmen" target="_blank">
-                                Mall Customer Segmentation: Who is our actual customer & How we treat them?
-                            </a>
-                        </h3>
-
-                        <p><strong>Problem:</strong><br>
-                            Mall memperlakukan 200 pelanggan dengan cara yang sama persis — satu campaign untuk semua.
-                            Tanpa segmentasi berbasis data, budget marketing tersebar merata ke pelanggan yang responsnya sangat berbeda, sehingga conversion rendah dan ROI tidak optimal.
-                        </p> 
-
-                        <p><strong>Approach:</strong><br>
-                            Menerapkan K-Means Clustering dengan Elbow Method untuk menentukan jumlah cluster optimal (k=5), dianalisis dari tiga sudut pandang: Age vs Spending Score, Income vs Spending Score,
-                            dan 3D clustering (Income × Age × Spending Score) dengan visualisasi interaktif via Plotly.
-                        </p>
-
-                        <p><strong>Key Insights:</strong><br>
-                            Dari data 200 pelanggan, ditemukan 5 profil yang sebelumnya diperlakukan identik oleh tim marketing: Affluent Spenders (income tinggi, spending tinggi
-                            — target utama loyalty program), Wealthy Cautious (income tinggi tapi spending rendah — perlu strategi aktivasi khusus), Young Enthusiasts (usia muda, spending tinggi — responsif terhadap promo digital agresif), Balanced Traditionalists (moderat & stabil — backbone revenue jangka panjang), dan Frugal Seniors (low priority untuk campaign intensif).
-                        </p>
-
-                        <p><strong>Business Impact:</strong><br>
-                           Insight ini menghasilkan 4 rekomendasi berbeda untuk 4 segmen berbeda — bukan satu kampanye generik. Wealthy Cautious adalah peluang terbesar yang tersembunyi:
-                           income tinggi tapi spending rendah mengindikasikan ada barrier yang bisa diintervensi dengan personalized campaign.
-                            <br>
-                           Dengan strategi berbasis segmen, alokasi budget marketing bisa diprioritaskan ke Affluent Spenders dan Young Enthusiasts yang memiliki spending propensity tertinggi
-                           — berpotensi meningkatkan conversion rate campaign 2–3× dibanding pendekatan one-size-fits-all sebelumnya.
-                        </p>
-
-                        <p><strong>Tools:</strong> Python, pandas, Scikit-learn, Seaborn, Plotly</p>
-                    </div>
-                </div>
-
-                <!-- PROJECT 3: E-COMMERCE DATASET ANALYSIS -->
-                <div class="project-card">
-                    <div class="project-thumb-wrap" onclick="openLightbox([
-                        {src:'images/foto-4.jpg', caption:'E-Commerce — Geographic Map'},
-                        {src:'images/foto-4b.png', caption:'E-Commerce — AOV by State'},
-                        {src:'images/foto-4c.png', caption:'E-Commerce — Order Distribution'}
-                    ])">
-                        <img src="images/foto-4.jpg" alt="E-Commerce Preview" class="project-thumb">
-                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>
-                            <a href="https://colab.research.google.com/drive/1P2NYQGAVuozA3Fe0CVC28eGYEHDxuntU?usp=sharing" target="_blank">
-                                E-Commerce Geographic Analysis — Volume Tinggi Belum Tentu Nilai Tinggi
-                            </a>
-                        </h3>
-
-                        <p><strong>Problem:</strong><br>
-                           Platform e-commerce Brasil beroperasi di 26+ negara bagian tanpa visibilitas yang jelas:
-                           apakah strategi yang sama efektif untuk semua wilayah? Di mana sebenarnya pasar bernilai tinggi yang selama ini tersembunyi di balik dominasi volume São Paulo?
-                        </p>
-
-                        <p><strong>Approach:</strong><br>
-                           Menganalisis ~100.000 transaksi dari 9 tabel relasional dataset Olist (2016–2018), dengan fokus pada tiga pertanyaan bisnis: distribusi volume
-                           pesanan per negara bagian, perbedaan Average Order Value (AOV) antarwilayah, dan implikasi strategisnya — divisualisasikan dengan bar chart dan geographic map via GeoPandas.
-                        </p>
-
-                        <p><strong>Key Insights:</strong><br>
-                            Ditemukan kontras yang menarik: São Paulo mendominasi volume pesanan secara nasional, namun AOV-nya justru termasuk rendah.
-                            Sebaliknya, negara bagian seperti Paraíba, Acre, dan Roraima memiliki volume kecil tapi AOV tertinggi — pasar high-value yang selama ini diperlakukan sama dengan pasar massal.
-                        </p>
-
-                        <p><strong>Business Impact:</strong><br>
-                            Dua strategi berbeda untuk dua tipe market: São Paulo → upselling dan product bundling untuk menaikkan nilai per transaksi;
-                            Paraíba, Acre, Roraima → produk premium dan exclusive offering, disertai optimasi logistik untuk membuka potensi pasar yang masih underpenetrated.
-                            <br>
-                            Realokasi strategi berbasis tipe market — bukan sekadar volume — memungkinkan platform memaksimalkan revenue per marketing dollar.
-                            Menarget wilayah high-value dengan pendekatan yang tepat berpotensi meningkatkan AOV nasional tanpa penambahan jumlah transaksi.
-                        </p>
-
-                        <p><strong>Tools:</strong> pandas, NumPy, Matplotlib, Seaborn, Geopandas</p>
-                    </div>
-                </div>
-
-                <!-- PROJECT 4: DASHBOARDING -->
-                <div class="project-card">
-                    <div class="project-thumb-wrap" onclick="openLightbox([
-                        {src:'images/foto-3.png', caption:'Retail Dashboard — Main View'},
-                        {src:'images/foto-3b.png', caption:'Retail Dashboard — Sales Trend'},
-                        {src:'images/foto-3c.png', caption:'Retail Dashboard — Product Performance'}
-                    ])">
-                        <img src="images/foto-3.png" alt="Dashboard Preview" class="project-thumb">
-                        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Photos</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>
-                            <a href="https://lookerstudio.google.com/reporting/5a86ac63-e482-47c2-8916-60b518606515" target="_blank">
-                                Retail Sales Dashboard, Dari Laporan Mingguan ke Monitoring Real-Time dengan Looker Studio
-                            </a>
-                        </h3>
-
-                        <p><strong>Problem:</strong><br>
-                            Tim bisnis retail harus menunggu laporan manual mingguan dari tim data untuk mengetahui performa penjualan 
-                            — keputusan menjadi lambat dan reaktif terhadap anomali yang seharusnya bisa ditangani lebih awal.
-                        </p>
-
-                        <p><strong>Approach:</strong><br>
-                            Membangun dashboard interaktif di Looker Studio untuk memvisualisasikan tren penjualan,
-                            distribusi metode pembayaran, dan produk terlaris secara self-serve oleh tim bisnis.
-                        </p>
-                        
-                        <p><strong>Key Insights:</strong><br>
-                            Dashboard mengungkap bahwa 3 produk top contributor menyumbang 67% revenue, namun ketiganya menunjukkan tren penurunan konsisten dalam 30 hari terakhir
-                            — sinyal yang sebelumnya tidak terdeteksi tanpa monitoring real-time.
-                        </p>
-
-                        <p><strong>Business Impact</strong><br>
-                            Dengan akses data self-serve, tim bisnis dapat merespons anomali penjualan dalam hitungan jam, bukan hari 
-                            — mengubah budaya pengambilan keputusan dari reaktif menjadi proaktif.
-                        </p>
-
-                        <p><strong>Tools:</strong> Looker Studio</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="competitions" class="section">
-        <div class="content">
-            <p class="section-super-header">COMPETITIONS</p>
-            <h2>Kompetisi & Prestasi</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <p class="timeline-date">Maret 2023 – Oktober 2023</p>
-                        <h3>Pekan Kreativitas Mahasiswa (PKM) 2023</h3>
-                        <p class="timeline-company">PKM Karsa Cipta (KC) - Kemendikbudristek</p>
-                        <p><em>
-                            Pengalaman ini memperkuat kemampuan saya dalam analisis masalah
-                            dan komunikasi ide kompleks dalam konteks proyek nyata.
-                        </em></p><br>
-                        <ul>
-                            <li>Memperoleh pendanaan untuk inovasi IoT pada hewan peliharaan, terpilih dari <strong>42.000+ proposal</strong> secara nasional.</li>
-                            <li>Menyusun strategi pengembangan produk end-to-end dengan <strong>design thinking</strong> untuk integrasi hardware-software, memantau progres, dan menyelesaikan MVP dalam 8 bulan.</li>
-                            <li>Mendesain UI/UX aplikasi mobile (7 halaman) menggunakan Figma dan mempresentasikannya pada sesi evaluasi bersama tim Kemendikbudristek.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-wrapper">
-                <div class="slider-container">
-                    <div class="slider">
-                        <img src="images/pkm_foto3.png" alt="Dokumentasi PKM-KC 1">
-                        <img src="images/pkm_foto4.png" alt="Dokumentasi PKM-KC 2">
-                        <img src="images/pkm_foto5.png" alt="Dokumentasi PKM-KC 3">
-                        <img src="images/pkm_foto1.jpg" alt="Dokumentasi PKM-KC 4">
-                        <img src="images/pkm_foto2.jpg" alt="Dokumentasi PKM-KC 5">
-                    </div>
-                    <button class="prev-button">&#10094;</button>
-                    <button class="next-button">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experiences" class="section">
-        <div class="content">
-            <p class="section-super-header">EXPERIENCES</p>
-            <h2>Pengalaman Profesional</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <p class="timeline-date">Februari 2025 – Juli 2025</p>
-                        <h3>Digital & IT Infrastructure Business Intern</h3>
-                        <p class="timeline-company">PT MRT Jakarta (Perseroda)</p>
-                        <p><em>
-                            Berkontribusi pada inisiatif optimalisasi bisnis dan infrastruktur digital
-                            melalui analisis data dan improvement proses operasional.
-                        </p></em><br>
-                        <ul>
-                            <li>Mengidentifikasi peluang improvement dengan mengembangkan solusi aplikasi RFID untuk registrasi merchandise, mengurangi waktu proses sebesar <strong>75%</strong> untuk lebih dari <strong>2.000 item</strong>.</li>
-                            <li>Melakukan analisis data bulanan infrastruktur TVM & MyMRTJ Lite menggunakan Python dan Excel, menghasilkan <strong>business insight</strong> yang mendorong inisiatif optimalisasi layanan WhatsApp Ticketing Agent.</li>
-                            <li>Berkolaborasi dengan lintas departemen melalui dokumentasi <strong>10+ rapat</strong> dengan menyusun minutes-of-meetings, memastikan keselarasan dan integrasi inisiatif digital.</li>
-                            <li>Melakukan UI/UX testing pada MartiShop, mengusulkan perbaikan fitur, dan berhasil melakukan <strong>onboarding 2 tenant baru</strong>.</li>
-                            <li>Mengelola proses vendor assessment untuk proyek PPOB dan audit teknis Telco.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-wrapper">
-                <div class="slider-container">
-                    <div class="slider">
-                        <img src="images/mrt_foto1.jpeg" alt="Pengalaman di MRT Jakarta 1">
-                        <img src="images/mrt_foto2.jpeg" alt="Pengalaman di MRT Jakarta 2">
-                        <img src="images/mrt_foto3.jpeg" alt="Pengalaman di MRT Jakarta 3">
-                    </div>
-                    <button class="prev-button">&#10094;</button>
-                    <button class="next-button">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIGHTBOX MODAL -->
-    <div id="lightbox" class="lightbox-overlay" onclick="closeLightboxOnBg(event)">
-        <div class="lightbox-modal">
-            <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
-            <button class="lightbox-prev" onclick="lightboxNav(-1)"><i class="fas fa-chevron-left"></i></button>
-            <button class="lightbox-next" onclick="lightboxNav(1)"><i class="fas fa-chevron-right"></i></button>
-            <div class="lightbox-img-wrap">
-                <img id="lightbox-img" src="" alt="">
-            </div>
-            <div class="lightbox-footer">
-                <p id="lightbox-caption"></p>
-                <span id="lightbox-counter"></span>
-            </div>
-        </div>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <span></span>
+      Available for Opportunities
     </div>
+    <h1>
+      Turning data<br>into <span class="name-accent">decisions</span>.
+    </h1>
+    <p class="hero-sub">
+      Digital Business graduate with proven experience building end-to-end data pipelines, ML systems, and automated workflows — turning raw data into decisions that drive real business outcomes.
+    </p>
+    <div class="hero-ctas">
+      <a href="projects.html" class="btn-primary">View Projects →</a>
+      <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn ↗</a>
+    </div>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sliderWrappers = document.querySelectorAll('.slider-wrapper');
-            sliderWrappers.forEach(wrapper => {
-                initializeSlider(wrapper);
-            });
-        });
+  <div class="hero-right">
+    <div class="stats-card">
+      <div class="stats-card-header">
+        <span class="stats-card-title">profile.json</span>
+        <div class="stats-card-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-block">
+          <div class="stat-val">5</div>
+          <div class="stat-label">Data Projects</div>
+          <div class="stat-sub">ML · SQL · Analytics · Dashboard</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-val">2</div>
+          <div class="stat-label">Auto Pipelines</div>
+          <div class="stat-sub">Flask · n8n · Supabase</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-val">100K+</div>
+          <div class="stat-label">Records Analyzed</div>
+          <div class="stat-sub">Olist · MRT · Banking</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-val">4</div>
+          <div class="stat-label">Industries</div>
+          <div class="stat-sub">Fintech · Retail · Transit · E-commerce</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        function initializeSlider(wrapper) {
-            let slideIndex = 0;
-            const slider = wrapper.querySelector('.slider');
-            const slides = wrapper.querySelectorAll('.slider img');
-            const prevButton = wrapper.querySelector('.prev-button');
-            const nextButton = wrapper.querySelector('.next-button');
-            const totalSlides = slides.length;
+<div class="divider"></div>
 
-            if (totalSlides <= 1) {
-                if(prevButton) prevButton.style.display = 'none';
-                if(nextButton) nextButton.style.display = 'none';
-                return;
-            }
+<section>
+  <div class="section-label">Technical Arsenal</div>
+  <h2 class="section-title">Tools & Technologies</h2>
+  <div class="skills-grid">
+    <div class="skill-chip"><i class="fab fa-python"></i><span>Python</span></div>
+    <div class="skill-chip"><i class="fas fa-database"></i><span>SQL</span></div>
+    <div class="skill-chip"><i class="fas fa-table"></i><span>Pandas</span></div>
+    <div class="skill-chip"><i class="fas fa-file-excel"></i><span>Excel</span></div>
+    <div class="skill-chip"><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
+    <div class="skill-chip"><i class="fas fa-chart-line"></i><span>Looker Studio</span></div>
+    <div class="skill-chip"><i class="fas fa-brain"></i><span>Scikit-learn</span></div>
+    <div class="skill-chip"><i class="fas fa-bolt"></i><span>LightGBM</span></div>
+    <div class="skill-chip"><i class="fas fa-server"></i><span>Flask</span></div>
+    <div class="skill-chip"><i class="fas fa-robot"></i><span>n8n</span></div>
+    <div class="skill-chip"><i class="fas fa-cube"></i><span>Supabase</span></div>
+    <div class="skill-chip"><i class="fab fa-github"></i><span>GitHub</span></div>
+  </div>
+</section>
 
-            function showSlide(n) {
-                if (n >= totalSlides) { slideIndex = 0; }
-                else if (n < 0) { slideIndex = totalSlides - 1; }
-                else { slideIndex = n; }
-                slider.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
-            }
+<div class="divider"></div>
 
-            prevButton.addEventListener('click', function() { showSlide(slideIndex - 1); });
-            nextButton.addEventListener('click', function() { showSlide(slideIndex + 1); });
-            showSlide(0);
-        }
+<section>
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="projects-grid">
 
-        // ===== LIGHTBOX =====
-        let lbImages = [];
-        let lbIndex = 0;
+    <a href="https://github.com/1sleep231/Customer_Churn" target="_blank" rel="noopener noreferrer" class="project-card">
+      <div class="project-thumb">
+        <img src="images/foto-1.png" alt="Customer Churn Prediction">
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Scikit-learn</span>
+          <span class="project-tag">LightGBM</span>
+          <span class="project-tag">Flask</span>
+        </div>
+        <div class="project-title">Customer Churn Prediction — From Analysis to Deployed Web App</div>
+        <p class="project-desc">
+          End-to-end ML pipeline comparing 4 models, identifying non-obvious churn signals (high-balance customers are higher risk), deployed as a real-time Flask web application.
+        </p>
+        <div class="project-metric">
+          <span class="project-metric-val">0.77</span>
+          <span class="project-metric-label">Recall (SVC) · Production-deployed via Flask</span>
+        </div>
+      </div>
+    </a>
 
-        function openLightbox(images) {
-            lbImages = images;
-            lbIndex = 0;
-            renderLightbox();
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+    <a href="https://github.com/1sleep231/" target="_blank" rel="noopener noreferrer" class="project-card">
+      <div class="project-thumb">
+        <img src="images/dw-architecture.png" alt="SQL Data Warehouse">
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">T-SQL</span>
+          <span class="project-tag">ETL</span>
+        </div>
+        <div class="project-title">SQL Data Warehouse — End-to-End Medallion Architecture</div>
+        <p class="project-desc">
+          Built a comprehensive data warehouse solution with bronze, silver, and gold layers, enabling holistic business analysis across multiple source systems.
+        </p>
+        <div class="project-metric">
+          <span class="project-metric-val">3</span>
+          <span class="project-metric-label">Schema Layers · Star Schema</span>
+        </div>
+      </div>
+    </a>
 
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
+  </div>
+  <a href="projects.html" class="view-all-link">View all 5 projects →</a>
+</section>
 
-        function closeLightboxOnBg(e) {
-            if (e.target === document.getElementById('lightbox')) closeLightbox();
-        }
+<div class="divider"></div>
 
-        function lightboxNav(dir) {
-            lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
-            renderLightbox();
-        }
+<section>
+  <div class="section-label">Experience</div>
+  <h2 class="section-title">Where I've Worked</h2>
+  <div class="exp-card">
+    <div class="exp-logo">🚇</div>
+    <div>
+      <div class="exp-role">Digital & IT Infrastructure Business Intern</div>
+      <div class="exp-company">PT MRT Jakarta (Perseroda)</div>
+      <div class="exp-period">February 2025 – July 2025</div>
+      <ul class="exp-bullets">
+        <li>Developed RFID solution for merchandise registration, reducing process time by <strong>75%</strong> across 2,000+ items.</li>
+        <li>Analyzed TVM & MyMRTJ Lite infrastructure data using Python and Excel, driving the WhatsApp Ticketing Agent optimization initiative.</li>
+        <li>Managed vendor assessment for PPOB project and conducted Telco technical audit.</li>
+      </ul>
+    </div>
+  </div>
+  <a href="experience.html" class="view-all-link">Full experience & competitions →</a>
+</section>
 
-        function renderLightbox() {
-            const img = document.getElementById('lightbox-img');
-            const caption = document.getElementById('lightbox-caption');
-            const counter = document.getElementById('lightbox-counter');
-            img.style.opacity = '0';
-            setTimeout(() => {
-                img.src = lbImages[lbIndex].src;
-                img.onload = () => { img.style.opacity = '1'; };
-                caption.textContent = lbImages[lbIndex].caption;
-                counter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
-                const prev = document.querySelector('.lightbox-prev');
-                const next = document.querySelector('.lightbox-next');
-                prev.style.display = lbImages.length <= 1 ? 'none' : '';
-                next.style.display = lbImages.length <= 1 ? 'none' : '';
-            }, 150);
-        }
+<footer>
+  <span class="footer-copy">© 2025 Quinasa Rama · Built with intention.</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/lyvisml/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:quinasarama@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
 
-        document.addEventListener('keydown', function(e) {
-            const lb = document.getElementById('lightbox');
-            if (!lb.classList.contains('active')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') lightboxNav(1);
-            if (e.key === 'ArrowLeft') lightboxNav(-1);
-        });
-    </script>
-    
-    <script>
-    // Dark mode toggle logic
-        const darkSwitch = document.getElementById('darkSwitch');
-        const body = document.body;
-        if(localStorage.getItem('dark-mode') === 'enabled'){
-            body.classList.add('dark-mode');
-            if(darkSwitch) darkSwitch.checked = true;
-        }
-        if(darkSwitch){
-            darkSwitch.addEventListener('change', function(){
-                if(this.checked){
-                    body.classList.add('dark-mode');
-                    localStorage.setItem('dark-mode', 'enabled');
-                } else {
-                    body.classList.remove('dark-mode');
-                    localStorage.setItem('dark-mode', 'disabled');
-                }
-            });
-        }
-    </script>
 
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const nav = document.getElementById('mobileNav');
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  });
+  // Close on link click
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+  }));
+</script>
 </body>
 </html>

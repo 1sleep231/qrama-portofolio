@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="End-to-end data projects: Customer Churn ML + Flask deployment, SQL Data Warehouse, customer segmentation, e-commerce geographic analysis, and retail dashboard.">
+  <meta name="author" content="Quinasa Rama">
+  <meta property="og:title" content="Projects — Quinasa Rama">
+  <meta property="og:description" content="End-to-end data projects: Customer Churn ML + Flask deployment, SQL Data Warehouse, customer segmentation, e-commerce geographic analysis, and retail dashboard.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1sleep231.github.io/projects.html">
+  <title>Projects — Quinasa Rama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><span class="logo-dot"></span>Quinasa Rama</a>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+  <a href="CV_Quinasa Rama.pdf" class="cv-btn">↓ Download CV</a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="">Overview</a>
+  <a href="projects.html" class="active">Projects</a>
+  <a href="experience.html" class="">Experience</a>
+  <a href="extras.html" class="">Extras</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="page-label">Selected Work</div>
+    <h1>Project Case Studies</h1>
+    <p class="page-sub">Each project starts with a real business problem — not just a dataset. Click on any image to explore screenshots in detail.</p>
+  </div>
+
+  <div class="projects-list">
+
+    <!-- PROJECT 1: SQL DATA WAREHOUSE -->
+    <div class="pcard" style="animation-delay:0.4s">
+      <div class="pcard-thumb" onclick="openLightbox([
+        {src:'images/dw-architecture.png', caption:'Data Warehouse — Medallion Architecture (Bronze → Silver → Gold)'},
+        {src:'images/dw-flow.png', caption:'Data Flow — CRM & ERP ke Bronze, Silver, Gold Layer'},
+        {src:'images/dw-integration.png', caption:'Data Integration — Source System Mapping'},
+        {src:'images/dw-layers.png', caption:'Layer Methodology — Analyze, Code, Validate, Document'},
+        {src:'images/dw-model.png', caption:'Data Mart — Star Schema (fact_sales + dim_customers + dim_products)'}
+      ])">
+        <img src="images/dw-architecture.png" alt="SQL Data Warehouse Architecture">
+        <div class="thumb-badge">🏗️ Data Engineering</div>
+        <div class="thumb-overlay"><i class="fas fa-images"></i> 5 Diagrams</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-tags">
+          <span class="tag">SQL Server</span><span class="tag">T-SQL</span>
+          <span class="tag">Stored Procedures</span><span class="tag">ETL</span>
+          <span class="tag">Star Schema</span><span class="tag">Data Modeling</span>
+        </div>
+        <div class="pcard-title">
+          <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer">
+            SQL Data Warehouse — End-to-End Medallion Architecture dari Dua Source System ↗
+          </a>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Problem</span>
+          <p>Dua sistem source (CRM dan ERP) menyimpan data customer, produk, dan transaksi secara terpisah dan tidak terstruktur — tidak ada cara untuk menganalisis bisnis secara holistik tanpa unified data model yang bisa dipercaya.</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Approach</span>
+          <p>Membangun <strong>end-to-end data warehouse</strong> dengan medallion architecture di SQL Server: <strong>Bronze layer</strong> (raw data ingestion via BULK INSERT stored procedure), <strong>Silver layer</strong> (data cleaning, standardization, normalization via ETL stored procedure), dan <strong>Gold layer</strong> (Star Schema business-ready views: fact_sales + dim_customers + dim_products). Setiap layer dilengkapi <strong>quality checks</strong> dan dokumentasi data catalog.</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Analytics Output</span>
+          <p>Gold layer menghasilkan 6 analytical query sets: database exploration, dimensions exploration, date range analysis, key measures (total sales, quantity, AOV), magnitude analysis (revenue per category, per customer, per country), dan ranking analysis dengan window functions (<strong>RANK(), DENSE_RANK(), ROW_NUMBER()</strong>).</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Business Impact</span>
+          <p>Pipeline dapat dieksekusi dengan dua command (<code>EXEC bronze.load_bronze</code> → <code>EXEC silver.load_silver</code>) menghasilkan business-ready views yang langsung dapat digunakan untuk BI reporting, ad-hoc SQL queries, atau machine learning — dari raw CSV ke analytical-ready dalam satu automated flow.</p>
+        </div>
+        <div class="pcard-metrics">
+          <div class="metric"><span class="metric-val">3</span><span class="metric-label">Schema Layers</span></div>
+          <div class="metric"><span class="metric-val">6</span><span class="metric-label">Source Tables</span></div>
+          <div class="metric"><span class="metric-val">6</span><span class="metric-label">Analysis Scripts</span></div>
+          <div class="metric"><span class="metric-val">Star</span><span class="metric-label">Schema Pattern</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-thumb" onclick="openLightbox([
+        {src:'images/foto-1.png', caption:'Customer Churn — Model Overview'},
+        {src:'images/foto-1b.png', caption:'Customer Churn — Model Comparison (SVC vs LightGBM)'},
+        {src:'images/foto-1c.png', caption:'Customer Churn — Flask Web App'}
+      ])">
+        <img src="images/foto-1.png" alt="Customer Churn">
+        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-tags">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span>
+          <span class="tag">LightGBM</span><span class="tag">Flask</span><span class="tag">ML</span>
+        </div>
+        <div class="pcard-title">
+          <a href="https://github.com/1sleep231/Customer_Churn" target="_blank" rel="noopener noreferrer">
+            Customer Churn Prediction — From Analysis to Deployed Web App ↗
+          </a>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Problem</span>
+          <p>Bank kehilangan nasabah tanpa sistem peringatan dini — strategi retensi berjalan reaktif, padahal biaya akuisisi nasabah baru <strong>5–25× lebih mahal</strong> daripada mempertahankan yang sudah ada.</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Key Insights</span>
+          <p>Nasabah dengan <strong>saldo tinggi justru lebih berisiko churn</strong> (bukan yang saldo rendah). Nasabah >2 produk menunjukkan risiko meningkat. Nasabah di Jerman churn signifikan lebih tinggi. Dipilih dua model untuk dua skenario: <strong>SVC</strong> (Recall 0.77) untuk retensi agresif, <strong>LightGBM</strong> untuk efisiensi budget.</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Impact</span>
+          <p>Flask deployment membuktikan kemampuan membawa model ke sistem yang langsung digunakan tim bisnis — bukan hanya notebook.</p>
+        </div>
+        <div class="pcard-metrics">
+          <div class="metric"><span class="metric-val">0.77</span><span class="metric-label">Recall (SVC)</span></div>
+          <div class="metric"><span class="metric-val">4</span><span class="metric-label">Models Compared</span></div>
+          <div class="metric"><span class="metric-val">Live</span><span class="metric-label">Flask Deployed</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-thumb" onclick="openLightbox([
+        {src:'images/foto-2.png', caption:'Mall Segmentation — Cluster Overview'},
+        {src:'images/foto-2b.png', caption:'Mall Segmentation — 3D Visualization (Plotly)'},
+        {src:'images/foto-2c.png', caption:'Mall Segmentation — Segment Profiles'}
+      ])">
+        <img src="images/foto-2.png" alt="Mall Segmentation">
+        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-tags">
+          <span class="tag">Python</span><span class="tag">K-Means</span>
+          <span class="tag">Scikit-learn</span><span class="tag">Plotly</span><span class="tag">Unsupervised ML</span>
+        </div>
+        <div class="pcard-title">
+          <a href="https://github.com/1sleep231/Customer_Segmen" target="_blank" rel="noopener noreferrer">
+            Mall Customer Segmentation — Siapa Pelanggan Kita Sebenarnya? ↗
+          </a>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Problem</span>
+          <p>Mall memperlakukan 200 pelanggan dengan cara yang sama persis. Tanpa segmentasi berbasis data, budget marketing tersebar merata ke pelanggan yang responsnya sangat berbeda — conversion rendah, ROI tidak optimal.</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Key Insights</span>
+          <p>5 segmen teridentifikasi: <strong>Affluent Spenders</strong> (target loyalty program), <strong>Wealthy Cautious</strong> (hidden opportunity — income tinggi tapi spending rendah, perlu strategi aktivasi), <strong>Young Enthusiasts</strong>, <strong>Balanced Traditionalists</strong>, dan <strong>Frugal Seniors</strong>. Dianalisis dari 3 sudut pandang termasuk 3D clustering interaktif via Plotly.</p>
+        </div>
+        <div class="pcard-metrics">
+          <div class="metric"><span class="metric-val">5</span><span class="metric-label">Segments Found</span></div>
+          <div class="metric"><span class="metric-val">k=5</span><span class="metric-label">Optimal Clusters</span></div>
+          <div class="metric"><span class="metric-val">2–3×</span><span class="metric-label">Conversion Potential</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-thumb" onclick="openLightbox([
+        {src:'images/foto-4.jpg', caption:'E-Commerce — Geographic Map (GeoPandas)'},
+        {src:'images/foto-4b.png', caption:'E-Commerce — AOV by State'},
+        {src:'images/foto-4c.png', caption:'E-Commerce — Order Distribution'}
+      ])">
+        <img src="images/foto-4.jpg" alt="E-Commerce Analysis">
+        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-tags">
+          <span class="tag">Python</span><span class="tag">Pandas</span>
+          <span class="tag">GeoPandas</span><span class="tag">Seaborn</span><span class="tag">EDA</span>
+        </div>
+        <div class="pcard-title">
+          <a href="https://colab.research.google.com/drive/1P2NYQGAVuozA3Fe0CVC28eGYEHDxuntU?usp=sharing" target="_blank" rel="noopener noreferrer">
+            E-Commerce Geographic Analysis — Volume Tinggi Belum Tentu Nilai Tinggi ↗
+          </a>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Problem</span>
+          <p>Platform e-commerce Brasil beroperasi di 26+ negara bagian tanpa visibilitas jelas: apakah strategi yang sama efektif untuk semua wilayah? Di mana pasar bernilai tinggi yang tersembunyi di balik dominasi volume São Paulo?</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Key Insights</span>
+          <p>São Paulo mendominasi volume pesanan, namun AOV-nya justru rendah. Sebaliknya, <strong>Paraíba, Acre, dan Roraima</strong> memiliki volume kecil tapi AOV tertinggi — pasar high-value yang diperlakukan sama dengan pasar massal. Rekomendasi: dua strategi berbeda untuk dua tipe market.</p>
+        </div>
+        <div class="pcard-metrics">
+          <div class="metric"><span class="metric-val">100K+</span><span class="metric-label">Transactions</span></div>
+          <div class="metric"><span class="metric-val">9</span><span class="metric-label">Relational Tables</span></div>
+          <div class="metric"><span class="metric-val">26+</span><span class="metric-label">States Mapped</span></div>
+        </div>
+      </div>
+    </div>
+
+<div style="display: flex; flex-direction: column; gap: 16px;">
+      <div class="pcard">
+        <div class="pcard-thumb" onclick="openLightbox([
+          {src:'images/foto-3.png', caption:'Retail Dashboard — Main View'},
+          {src:'images/foto-3b.png', caption:'Retail Dashboard — Sales Trend'},
+          {src:'images/foto-3c.png', caption:'Retail Dashboard — Product Performance'}
+        ])">
+          <img src="images/foto-3.png" alt="Retail Dashboard">
+          <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+        </div>
+        
+        <div class="pcard-body">
+          <div class="pcard-tags">
+            <span class="tag">Looker Studio</span><span class="tag">Dashboard</span><span class="tag">BI</span>
+          </div>
+          <div class="pcard-title">
+            <a href="https://lookerstudio.google.com/reporting/5a86ac63-e482-47c2-8916-60b518606515" target="_blank">
+              Retail Sales Dashboard — Monitoring Real-Time ↗
+            </a>
+          </div>
+          
+          <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green); margin: 10px 0;">
+            <p style="font-size: 13px; font-weight: 600; color: var(--text); margin: 0; line-height: 1.5;">
+              ⚡ TL;DR: Mengubah laporan manual mingguan menjadi dashboard real-time yang memantau 67% revenue utama secara otomatis.
+            </p>
+          </div>
+
+          <div class="pcard-section">
+            <span class="pcard-section-label">Problem</span>
+            <p>Tim bisnis retail menunggu laporan manual mingguan, sehingga keputusan menjadi lambat dan reaktif.</p>
+          </div>
+
+          <div class="pcard-section">
+            <span class="pcard-section-label">Key Insights</span>
+            <p><strong>3 produk top contributor menyumbang 67% revenue</strong>, namun ketiganya menunjukkan tren penurunan konsisten. Dashboard self-serve mengubah budaya dari reaktif menjadi proaktif.</p>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <button onclick="toggleEmbed()" class="btn-outline" style="padding: 8px 16px; font-size: 11px;">
+              <i class="fas fa-eye"></i> View Live Interactive Dashboard
+            </button>
+          </div>
+
+          <div class="pcard-metrics">
+            <div class="metric"><span class="metric-val">67%</span><span class="metric-label">Revenue by Top 3</span></div>
+            <div class="metric"><span class="metric-val">Real-time</span><span class="metric-label">Live Dashboard</span></div>
+          </div>
+        </div>
+      </div> <div id="dashboard-embed" style="display:none; width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: var(--surface);">
+        <iframe width="100%" height="600" src="https://lookerstudio.google.com/embed/reporting/5a86ac63-e482-47c2-8916-60b518606515/page/1M" frameborder="0" style="border:0; display: block;" allowfullscreen></iframe>
+      </div>
+
+    </div> <script>
+      function toggleEmbed() {
+        var x = document.getElementById("dashboard-embed");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          // Opsional: Scroll sedikit ke bawah agar dashboard langsung terlihat penuh
+          setTimeout(() => {
+            x.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightboxOnBg(event)">
+  <div class="lightbox-modal">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev" onclick="lightboxNav(-1)"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" onclick="lightboxNav(1)"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-img-wrap"><img id="lightbox-img" src="" alt=""></div>
+    <div class="lightbox-footer">
+      <p id="lightbox-caption"></p>
+      <span id="lightbox-counter"></span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 Quinasa Rama · Built with intention.</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+    <a href="mailto:quinasarama@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+<script>
+  let lbImages = [], lbIndex = 0;
+  function openLightbox(images) {
+    lbImages = images; lbIndex = 0; renderLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOnBg(e) { if (e.target === document.getElementById('lightbox')) closeLightbox(); }
+  function lightboxNav(dir) { lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length; renderLightbox(); }
+  function renderLightbox() {
+    const img = document.getElementById('lightbox-img');
+    const caption = document.getElementById('lightbox-caption');
+    const counter = document.getElementById('lightbox-counter');
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = lbImages[lbIndex].src;
+      img.onload = () => { img.style.opacity = '1'; };
+      caption.textContent = lbImages[lbIndex].caption;
+      counter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+      document.querySelector('.lightbox-prev').style.display = lbImages.length <= 1 ? 'none' : '';
+      document.querySelector('.lightbox-next').style.display = lbImages.length <= 1 ? 'none' : '';
+    }, 120);
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') lightboxNav(1);
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+  });
+</script>
+
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const nav = document.getElementById('mobileNav');
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  });
+  // Close on link click
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+  }));
+</script>
+</body>
+</html>

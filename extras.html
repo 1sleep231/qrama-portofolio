@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automated data pipelines: Indo Fintech Radar (n8n + Supabase + LLM) and Fintech Pulse Monitor — live systems running daily.">
+  <meta name="author" content="Quinasa Rama">
+  <meta property="og:title" content="Extras — Quinasa Rama">
+  <meta property="og:description" content="Automated data pipelines: Indo Fintech Radar (n8n + Supabase + LLM) and Fintech Pulse Monitor — live systems running daily.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1sleep231.github.io/extras.html">
+  <title>Extras — Quinasa Rama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><span class="logo-dot"></span>Quinasa Rama</a>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="extras.html" class="active">Extras</a>
+  </nav>
+  <a href="CV_Quinasa Rama.pdf" class="cv-btn">↓ Download CV</a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="">Overview</a>
+  <a href="projects.html" class="">Projects</a>
+  <a href="experience.html" class="">Experience</a>
+  <a href="extras.html" class="active">Extras</a>
+</div>
+
+<div class="page-wrap">
+
+  <div class="page-label">Beyond Projects</div>
+  <h1>Automated Pipelines & More</h1>
+  <p class="page-sub">Di luar project analysis, saya membangun sistem yang berjalan sendiri — pipeline otomatis yang mengumpulkan, memproses, dan mendistribusikan insight tanpa intervensi manual.</p>
+
+  <div class="pipeline-card">
+    <div class="pipeline-header">
+      <div class="pipeline-title">Indo Fintech Radar</div>
+      <div class="pipeline-status planned">
+        <span class="status-dot"></span>
+        In Progress
+      </div>
+    </div>
+    <div class="pipeline-body">
+      <p class="pipeline-desc">
+        End-to-end automated intelligence pipeline monitoring Indonesia's fintech ecosystem — collecting real-time data from 4 APIs daily, detecting statistical anomalies using Z-score analysis in Python, generating AI-written market summaries via LLM, and delivering insights to a public Looker Studio dashboard and Telegram alerts.
+      </p>
+      <div class="pipeline-stack">
+        <span class="stack-tag">n8n</span>
+        <span class="stack-tag">Supabase (PostgreSQL)</span>
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Z-score Anomaly Detection</span>
+        <span class="stack-tag">LLM API</span>
+        <span class="stack-tag">Looker Studio</span>
+        <span class="stack-tag">Telegram Bot</span>
+        <span class="stack-tag">OJK Stats API</span>
+        <span class="stack-tag">NewsAPI</span>
+        <span class="stack-tag">ExchangeRate API</span>
+      </div>
+      <div class="pipeline-flow">
+        <span class="flow-node">OJK Stats</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">NewsAPI</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Kurs API</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">n8n Scheduler</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Supabase DB</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Python Anomaly</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">AI Summary</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Dashboard + Telegram</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pipeline-card" style="animation-delay:0.1s">
+    <div class="pipeline-header">
+      <div class="pipeline-title">Automated Fintech Pulse Monitor</div>
+      <div class="pipeline-status">
+        <span class="status-dot"></span>
+        Live · Runs Daily
+      </div>
+    </div>
+    <div class="pipeline-body">
+      <p class="pipeline-desc">
+        Pipeline otomatis yang setiap pagi mengumpulkan data kurs USD/IDR dan top 5 headline fintech Indonesia via API, menyimpannya ke Google Sheets sebagai time-series database, dan mengirim digest ringkasan ke Telegram — tanpa intervensi manual.
+      </p>
+      <div class="pipeline-stack">
+        <span class="stack-tag">n8n Cloud</span>
+        <span class="stack-tag">ExchangeRate API</span>
+        <span class="stack-tag">NewsAPI</span>
+        <span class="stack-tag">Google Sheets</span>
+        <span class="stack-tag">Telegram Bot</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+      <div class="pipeline-flow">
+        <span class="flow-node">Schedule 08:00</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Kurs API</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-node">NewsAPI</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Merge & Format</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Google Sheets</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Telegram Digest</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="skills-section-title">Technical Skills, Categorized</div>
+  <div class="skills-categories">
+    <div class="skill-row">
+      <div class="skill-row-icon"><i class="fas fa-database"></i></div>
+      <div>
+        <div class="skill-row-name">Data Analysis & Engineering</div>
+        <div class="skill-row-tags">
+          <span class="skill-row-tag">Python</span>
+          <span class="skill-row-tag">Pandas</span>
+          <span class="skill-row-tag">NumPy</span>
+          <span class="skill-row-tag">SQL</span>
+          <span class="skill-row-tag">Excel</span>
+          <span class="skill-row-tag">GeoPandas</span>
+        </div>
+      </div>
+    </div>
+    <div class="skill-row" style="animation-delay:0.1s">
+      <div class="skill-row-icon"><i class="fas fa-brain"></i></div>
+      <div>
+        <div class="skill-row-name">Machine Learning</div>
+        <div class="skill-row-tags">
+          <span class="skill-row-tag">Scikit-learn</span>
+          <span class="skill-row-tag">LightGBM</span>
+          <span class="skill-row-tag">K-Means</span>
+          <span class="skill-row-tag">SVC</span>
+          <span class="skill-row-tag">Logistic Regression</span>
+          <span class="skill-row-tag">Random Forest</span>
+        </div>
+      </div>
+    </div>
+    <div class="skill-row" style="animation-delay:0.15s">
+      <div class="skill-row-icon"><i class="fas fa-chart-bar"></i></div>
+      <div>
+        <div class="skill-row-name">Visualization & BI</div>
+        <div class="skill-row-tags">
+          <span class="skill-row-tag">Looker Studio</span>
+          <span class="skill-row-tag">Power BI</span>
+          <span class="skill-row-tag">Matplotlib</span>
+          <span class="skill-row-tag">Seaborn</span>
+          <span class="skill-row-tag">Plotly</span>
+        </div>
+      </div>
+    </div>
+    <div class="skill-row" style="animation-delay:0.2s">
+      <div class="skill-row-icon"><i class="fas fa-robot"></i></div>
+      <div>
+        <div class="skill-row-name">Automation & Deployment</div>
+        <div class="skill-row-tags">
+          <span class="skill-row-tag">n8n</span>
+          <span class="skill-row-tag">Flask</span>
+          <span class="skill-row-tag">Supabase</span>
+          <span class="skill-row-tag">REST API</span>
+          <span class="skill-row-tag">Telegram Bot API</span>
+          <span class="skill-row-tag">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <div class="cta-title">Let's work together.</div>
+    <p class="cta-sub">Saya sedang aktif mencari kesempatan sebagai Data Analyst. Terbuka untuk diskusi, kolaborasi, atau sekadar berbagi ide.</p>
+    <div class="cta-btns">
+      <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank" rel="noopener noreferrer" class="btn-cyan">Connect on LinkedIn →</a>
+      <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer" class="btn-outline">View GitHub ↗</a>
+      <a href="/cdn-cgi/l/email-protection#7d0c0814131c0e1c0f1c101c3d1a101c1411531e1210" class="btn-outline">Email Me ✉</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 Quinasa Rama · Built with intention.</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/lyvisml/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram">
