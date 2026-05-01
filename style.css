@@ -17,7 +17,7 @@
   --amber:     #F59E0B;
   --text:      #E2ECF4;
   --muted:     #6B8BA4;
-  --muted2:    #4a6580;
+  --muted2:    #7d93b0;
 }
 
 html { scroll-behavior: smooth; }
@@ -289,7 +289,80 @@ section { padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
 /* ==========================================================================
    PROJECTS PAGE SPECIFIC
    ========================================================================== */
-.projects-list { display: flex; flex-direction: column; gap: 28px; }
+.projects-grid-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.pcard-grid {
+  background: var(--surface); 
+  border: 1px solid var(--border); 
+  border-radius: 12px;
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column;
+  transition: border-color 0.25s, box-shadow 0.25s; 
+  animation: fadeUp 0.5s ease both;
+}
+
+.pcard-grid:hover { 
+  border-color: var(--cyan); 
+  box-shadow: 0 8px 40px rgba(0,200,224,0.08); 
+}
+
+/* Gambar di atas untuk grid 2 kolom */
+.pcard-grid .pcard-thumb {
+  height: 220px;
+  width: 100%;
+}
+
+/* Kontainer Detail yang disembunyikan by default */
+.pcard-details {
+  display: none; 
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+}
+
+.pcard-details.open {
+  display: flex;
+  animation: fadeDown 0.3s ease;
+}
+
+/* Tombol Expand/Collapse */
+.btn-expand {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1px solid rgba(0,200,224,0.2);
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 16px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-expand:hover {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+/* Penyesuaian Mobile: Kembali ke 1 Kolom */
+@media (max-width: 900px) {
+  .projects-grid-view { grid-template-columns: 1fr; }
+}
+
+   .projects-list { display: flex; flex-direction: column; gap: 28px; }
 .pcard {
   background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
   overflow: hidden; display: grid; grid-template-columns: 320px 1fr;
@@ -514,4 +587,272 @@ footer { border-top: 1px solid var(--border); padding: 36px 48px; display: flex;
   .cta-box { padding: 32px 24px; }
 
   footer { flex-direction: column; gap: 20px; padding: 32px 24px; }
+}
+
+@media (max-width: 900px) {
+  .slider-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Untuk kelancaran di iOS */
+  }
+  .slider-track img {
+    scroll-snap-align: center;
+  }
+  /* Sembunyikan tombol prev/next di mobile jika memakai native scroll */
+  .slider-btn { display: none; } 
+}
+
+.values-container { padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.value-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan); /* Mengembalikan warna cyan yang menyala */
+  box-shadow: 0 12px 40px rgba(0, 200, 224, 0.1); /* Menambahkan efek glow/pendaran */
+}
+
+.value-icon {
+  font-size: 28px;
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+
+.value-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.value-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.value-proof {
+  background: var(--bg);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text);
+  border-left: 3px solid var(--cyan);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.value-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.v-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  background: var(--surface2);
+  color: var(--muted);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.value-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .values-grid { grid-template-columns: 1fr; }
+}
+
+/* VALUES mods */
+.section-title .accent-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800; /* Extra bold */
+  font-size: 1.5em; /* Sedikit lebih besar dari teks sekitarnya */
+  letter-spacing: 0.05em;
+  
+  /* Efek Gradient */
+  background: linear-gradient(135deg, var(--cyan) 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Efek Glow/Bayangan agar pop-out di background gelap */
+  text-shadow: 0 0 20px rgba(0, 200, 224, 0.3);
+  
+  /* Menambahkan dekorasi garis bawah tipis ala teknologi (opsional) */
+  position: relative;
+  display: inline-block;
+}
+
+/* Animasi halus saat hover agar terasa interaktif */
+.section-title .accent-text:hover {
+  text-shadow: 0 0 30px var(--cyan-glow);
+  transition: text-shadow 0.3s ease;
+}
+
+/* ==========================================================================
+   SCROLL INDICATOR
+   ========================================================================== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px; /* Jarak dari bawah hero */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  animation: bounce 2s infinite; /* Mengaktifkan animasi membal */
+}
+
+.scroll-indicator:hover {
+  color: var(--cyan);
+  opacity: 1;
+}
+
+/* Animasi Membal (Bounce) */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+/* Sembunyikan di layar yang sangat kecil jika dirasa mengganggu (opsional) */
+@media (max-height: 600px) {
+  .scroll-indicator { display: none; }
+}
+
+/* ==========================================================================
+   APP MODAL (UNTUK EMBED FLASK & LOOKER STUDIO)
+   ========================================================================== */
+.app-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(6px); /* Efek blur pada background web */
+  animation: fadeIn 0.3s ease;
+}
+
+.app-modal-overlay.active {
+  display: flex;
+}
+
+.app-modal-content {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--cyan); /* Aksen garis cyan */
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1100px; /* Lebar box horizontal optimal */
+  height: 85vh; /* Proporsional tidak full screen */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 200, 224, 0.15);
+}
+
+.app-modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-modal-close {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.app-modal-close:hover {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+#app-iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 12px 12px;
+  background: #fff; /* Agar Looker Studio tidak bermasalah dengan dark mode */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==========================================================================
+   VALUE PROPOSITION CARDS (INDEX)
+   ========================================================================== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.value-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan);
+  box-shadow: 0 12px 40px rgba(0, 200, 224, 0.15);
 }

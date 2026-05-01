@@ -3,21 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="End-to-end data projects: Customer Churn ML + Flask deployment, SQL Data Warehouse, customer segmentation, e-commerce geographic analysis, and retail dashboard.">
+  
+  <!-- SEO Dasar -->
+  <meta name="description" content="Data Analyst specializing in Python, SQL, ML, and automated data pipelines. Fresh graduate with hands-on project experience across fintech, retail, and e-commerce.">
   <meta name="author" content="Quinasa Rama">
-  <meta property="og:title" content="Projects — Quinasa Rama">
-  <meta property="og:description" content="End-to-end data projects: Customer Churn ML + Flask deployment, SQL Data Warehouse, customer segmentation, e-commerce geographic analysis, and retail dashboard.">
+  <meta name="keywords" content="Data Analyst, Machine Learning, Python, SQL, Flask, Business Intelligence, Data Pipeline">
+  
+  <!-- Open Graph / Meta Tags (Untuk WhatsApp, LinkedIn, Facebook, dll) -->
+  <meta property="og:title" content="Quinasa Rama — Data Analyst Portfolio">
+  <meta property="og:description" content="Turning data into decisions. Explore end-to-end data pipelines, ML systems, and automated workflows.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://1sleep231.github.io/projects.html">
-  <title>Projects — Quinasa Rama</title>
+  <meta property="og:url" content="https://1sleep231.github.io/qrama-portofolio/"> <!-- GANTI DENGAN URL LENGKAP -->
+  <meta property="og:image" content="https://drive.google.com/file/d/1XAlk9M-aM3J0MSH_AVCrgYlzSRhJf4Gi/view?usp=sharing"> <!-- PENTING: Gunakan URL Absolut (Lengkap) untuk gambar -->
+  
+  <!-- Twitter Card (Opsional, tapi bagus untuk berjaga-jaga) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quinasa Rama — Data Analyst Portfolio">
+  <meta name="twitter:description" content="Turning data into decisions. Explore end-to-end data pipelines, ML systems, and automated workflows.">
+  <meta name="twitter:image" content="https://drive.google.com/file/d/1XAlk9M-aM3J0MSH_AVCrgYlzSRhJf4Gi/view?usp=sharing">
+
+  <title>Quinasa Rama — Data Analyst</title>
+  
+  <link rel="icon" type="image/png" href="images/favicon.ico">  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
 <header>
   <a href="index.html" class="logo"><span class="logo-dot"></span>Quinasa Rama</a>
   <nav>
@@ -27,7 +42,7 @@
     <a href="extras.html">Extras</a>
   </nav>
   <a href="CV_Quinasa Rama.pdf" class="cv-btn">↓ Download CV</a>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+  <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-label="Toggle navigation">
     <span></span><span></span><span></span>
   </button>
 
@@ -46,76 +61,116 @@
     <p class="page-sub">Each project starts with a real business problem — not just a dataset. Click on any image to explore screenshots in detail.</p>
   </div>
 
-  <div class="projects-list">
+ <div class="projects-grid-view">
+    
+  <div class="pcard-grid" style="animation-delay:0.1s">
+    <div class="pcard-thumb" onclick="openLightbox([
+      {src:'images/dw-architecture.png', caption:'Data Warehouse — Medallion Architecture (Bronze → Silver → Gold)'},
+      {src:'images/dw-flow.png', caption:'Data Flow — CRM & ERP ke Bronze, Silver, Gold Layer'},
+      {src:'images/dw-integration.png', caption:'Data Integration — Source System Mapping'},
+      {src:'images/dw-layers.png', caption:'Layer Methodology — Analyze, Code, Validate, Document'},
+      {src:'images/dw-model.png', caption:'Data Mart — Star Schema (fact_sales + dim_customers + dim_products)'}
+    ])">
+      <img src="images/dw-architecture.png" alt="SQL Data Warehouse Architecture" loading="lazy">
+      <div class="thumb-badge">🏗️ Data Engineering</div>
+      <div class="thumb-overlay"><i class="fas fa-images"></i> 5 Diagrams</div>
+    </div>
 
-    <!-- PROJECT 1: SQL DATA WAREHOUSE -->
-    <div class="pcard" style="animation-delay:0.4s">
-      <div class="pcard-thumb" onclick="openLightbox([
-        {src:'images/dw-architecture.png', caption:'Data Warehouse — Medallion Architecture (Bronze → Silver → Gold)'},
-        {src:'images/dw-flow.png', caption:'Data Flow — CRM & ERP ke Bronze, Silver, Gold Layer'},
-        {src:'images/dw-integration.png', caption:'Data Integration — Source System Mapping'},
-        {src:'images/dw-layers.png', caption:'Layer Methodology — Analyze, Code, Validate, Document'},
-        {src:'images/dw-model.png', caption:'Data Mart — Star Schema (fact_sales + dim_customers + dim_products)'}
-      ])">
-        <img src="images/dw-architecture.png" alt="SQL Data Warehouse Architecture">
-        <div class="thumb-badge">🏗️ Data Engineering</div>
-        <div class="thumb-overlay"><i class="fas fa-images"></i> 5 Diagrams</div>
+    <div class="pcard-body">
+      <div class="pcard-tags">
+        <span class="tag">SQL Server</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">ETL</span>
+        <span class="tag">Star Schema</span>
       </div>
-      <div class="pcard-body">
-        <div class="pcard-tags">
-          <span class="tag">SQL Server</span><span class="tag">T-SQL</span>
-          <span class="tag">Stored Procedures</span><span class="tag">ETL</span>
-          <span class="tag">Star Schema</span><span class="tag">Data Modeling</span>
-        </div>
-        <div class="pcard-title">
-          <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer">
-            SQL Data Warehouse — End-to-End Medallion Architecture dari Dua Source System ↗
-          </a>
-        </div>
+
+      <div class="pcard-title" style="margin-bottom: 8px;">
+        <a href="https://github.com/1sleep231" target="_blank" rel="noopener noreferrer">
+          SQL Data Warehouse — End-to-End Medallion Architecture ↗
+        </a>
+      </div>
+
+      <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green);">
+        <p style="font-size: 13px; font-weight: 600; margin: 0; color: var(--text);">
+          ⚡ TL;DR: Mengubah raw data CRM & ERP menjadi dashboard analitik berbasis star schema dalam satu pipeline otomatis.
+        </p>
+      </div>
+
+      <button class="btn-expand" onclick="toggleProjectDetails(this)">
+        <i class="fas fa-chevron-down"></i> Read Full Case Study
+      </button>
+
+      <div class="pcard-details">
         <div class="pcard-section">
           <span class="pcard-section-label">Problem</span>
           <p>Dua sistem source (CRM dan ERP) menyimpan data customer, produk, dan transaksi secara terpisah dan tidak terstruktur — tidak ada cara untuk menganalisis bisnis secara holistik tanpa unified data model yang bisa dipercaya.</p>
         </div>
         <div class="pcard-section">
           <span class="pcard-section-label">Approach</span>
-          <p>Membangun <strong>end-to-end data warehouse</strong> dengan medallion architecture di SQL Server: <strong>Bronze layer</strong> (raw data ingestion via BULK INSERT stored procedure), <strong>Silver layer</strong> (data cleaning, standardization, normalization via ETL stored procedure), dan <strong>Gold layer</strong> (Star Schema business-ready views: fact_sales + dim_customers + dim_products). Setiap layer dilengkapi <strong>quality checks</strong> dan dokumentasi data catalog.</p>
+          <p>MMembangun <strong>end-to-end data warehouse</strong> dengan medallion architecture di SQL Server: <strong>Bronze layer</strong> (raw data ingestion via BULK INSERT stored procedure), <strong>Silver layer</strong> (data cleaning, standardization, normalization via ETL stored procedure), dan <strong>Gold layer</strong> (Star Schema business-ready views: fact_sales + dim_customers + dim_products). Setiap layer dilengkapi quality checks dan dokumentasi data catalog.</p>
         </div>
         <div class="pcard-section">
-          <span class="pcard-section-label">Analytics Output</span>
-          <p>Gold layer menghasilkan 6 analytical query sets: database exploration, dimensions exploration, date range analysis, key measures (total sales, quantity, AOV), magnitude analysis (revenue per category, per customer, per country), dan ranking analysis dengan window functions (<strong>RANK(), DENSE_RANK(), ROW_NUMBER()</strong>).</p>
+          <span class="pcard-section-label">Key Insights</span>
+          <p>Gold layer menghasilkan 6 analytical query sets: database exploration, dimensions exploration, date range analysis, key measures (total sales, quantity, AOV), magnitude analysis (revenue per category, per customer, per country), dan ranking analysis dengan window functions (RANK(), DENSE_RANK(), ROW_NUMBER()).</p>
+          <p>Pipeline dapat dieksekusi dengan dua command (EXEC bronze.load_bronze → EXEC silver.load_silver) menghasilkan business-ready views yang langsung dapat digunakan untuk BI reporting, ad-hoc SQL queries, atau machine learning — dari raw CSV ke analytical-ready dalam satu automated flow.</p>
         </div>
-        <div class="pcard-section">
-          <span class="pcard-section-label">Business Impact</span>
-          <p>Pipeline dapat dieksekusi dengan dua command (<code>EXEC bronze.load_bronze</code> → <code>EXEC silver.load_silver</code>) menghasilkan business-ready views yang langsung dapat digunakan untuk BI reporting, ad-hoc SQL queries, atau machine learning — dari raw CSV ke analytical-ready dalam satu automated flow.</p>
+
+        <div style="margin-top: 12px;">
+          <div style="font-size: 11px; color: var(--muted); margin-bottom: 6px;">
+            📊 Dashboard Preview
+          </div>
+          <div class="pcard-thumb" onclick="openLightbox([
+            {src:'images/sales-dw-dashboard.jpg', caption:'Power BI Dashboard — Sales Overview'},
+          ])" style="cursor:pointer; height: 120px;">
+            <img src="images/sales-dw-dashboard.jpg" alt="Power BI Dashboard Preview" loading="lazy">
+            <div class="thumb-overlay">
+              <i class="fas fa-expand"></i> View Dashboard
+            </div>
+          </div>
         </div>
-        <div class="pcard-metrics">
-          <div class="metric"><span class="metric-val">3</span><span class="metric-label">Schema Layers</span></div>
-          <div class="metric"><span class="metric-val">6</span><span class="metric-label">Source Tables</span></div>
-          <div class="metric"><span class="metric-val">6</span><span class="metric-label">Analysis Scripts</span></div>
-          <div class="metric"><span class="metric-val">Star</span><span class="metric-label">Schema Pattern</span></div>
+
+        <div class="pcard-metrics" style="margin-top: 16px; padding-top: 16px;">
+          <div class="metric"><span class="metric-val">3</span><span class="metric-label">Layers</span></div>
+          <div class="metric"><span class="metric-val">6</span><span class="metric-label">Analytical Queries</span></div>
+          <div class="metric"><span class="metric-val">Star</span><span class="metric-label">Schema</span></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="pcard">
-      <div class="pcard-thumb" onclick="openLightbox([
-        {src:'images/foto-1.png', caption:'Customer Churn — Model Overview'},
-        {src:'images/foto-1b.png', caption:'Customer Churn — Model Comparison (SVC vs LightGBM)'},
-        {src:'images/foto-1c.png', caption:'Customer Churn — Flask Web App'}
-      ])">
-        <img src="images/foto-1.png" alt="Customer Churn">
-        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+  <div class="pcard-grid" style="animation-delay:0.2s">
+    <div class="pcard-thumb" onclick="openLightbox([
+      {src:'images/foto-1.png', caption:'Customer Churn — Model Overview'},
+      {src:'images/foto-1b.png', caption:'Customer Churn — Model Comparison (SVC vs LightGBM)'},
+      {src:'images/foto-1c.png', caption:'Customer Churn — Flask Web App'}
+    ])">
+      <img src="images/foto-1.png" alt="Customer Churn" loading="lazy">
+      <div class="thumb-badge">🤖 Machine Learning</div>
+      <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+    </div>
+
+    <div class="pcard-body">
+      <div class="pcard-tags">
+        <span class="tag">Python</span><span class="tag">Scikit-learn</span>
+        <span class="tag">LightGBM</span><span class="tag">Flask</span>
       </div>
-      <div class="pcard-body">
-        <div class="pcard-tags">
-          <span class="tag">Python</span><span class="tag">Scikit-learn</span>
-          <span class="tag">LightGBM</span><span class="tag">Flask</span><span class="tag">ML</span>
-        </div>
-        <div class="pcard-title">
-          <a href="https://github.com/1sleep231/Customer_Churn" target="_blank" rel="noopener noreferrer">
-            Customer Churn Prediction — From Analysis to Deployed Web App ↗
-          </a>
-        </div>
+      <div class="pcard-title" style="margin-bottom: 8px;">
+        <a href="https://github.com/1sleep231/Customer_Churn" target="_blank" rel="noopener noreferrer">
+          Customer Churn Prediction — From Analysis to Deployed Web App ↗
+        </a>
+      </div>
+
+      <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green);">
+        <p style="font-size: 13px; font-weight: 600; margin: 0; color: var(--text);">
+          ⚡ TL;DR: End-to-end ML pipeline membandingkan 4 model, mendeteksi sinyal churn, dan di-deploy sebagai Flask web app.
+        </p>
+      </div>
+
+      <button class="btn-expand" onclick="toggleProjectDetails(this)">
+        <i class="fas fa-chevron-down"></i> Read Full Case Study
+      </button>
+
+      <div class="pcard-details">
         <div class="pcard-section">
           <span class="pcard-section-label">Problem</span>
           <p>Bank kehilangan nasabah tanpa sistem peringatan dini — strategi retensi berjalan reaktif, padahal biaya akuisisi nasabah baru <strong>5–25× lebih mahal</strong> daripada mempertahankan yang sudah ada.</p>
@@ -128,33 +183,55 @@
           <span class="pcard-section-label">Impact</span>
           <p>Flask deployment membuktikan kemampuan membawa model ke sistem yang langsung digunakan tim bisnis — bukan hanya notebook.</p>
         </div>
-        <div class="pcard-metrics">
+
+        <div style="margin-top: 20px;">
+          <button onclick="openAppModal('https://1sleep23.pythonanywhere.com/', 'AI Customer Churn Predictor')" class="btn-cyan" style="width: 100%; padding: 12px; font-size: 13px;">
+            <i class="fas fa-rocket"></i> Launch Live Prediction App
+          </button>
+        </div>
+        
+        <div class="pcard-metrics" style="margin-top: 16px; padding-top: 16px;">
           <div class="metric"><span class="metric-val">0.77</span><span class="metric-label">Recall (SVC)</span></div>
-          <div class="metric"><span class="metric-val">4</span><span class="metric-label">Models Compared</span></div>
-          <div class="metric"><span class="metric-val">Live</span><span class="metric-label">Flask Deployed</span></div>
+          <div class="metric"><span class="metric-val">4</span><span class="metric-label">Models</span></div>
+          <div class="metric"><span class="metric-val">Live</span><span class="metric-label">Flask App</span></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="pcard">
-      <div class="pcard-thumb" onclick="openLightbox([
-        {src:'images/foto-2.png', caption:'Mall Segmentation — Cluster Overview'},
-        {src:'images/foto-2b.png', caption:'Mall Segmentation — 3D Visualization (Plotly)'},
-        {src:'images/foto-2c.png', caption:'Mall Segmentation — Segment Profiles'}
-      ])">
-        <img src="images/foto-2.png" alt="Mall Segmentation">
-        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+  <div class="pcard-grid" style="animation-delay:0.3s">
+    <div class="pcard-thumb" onclick="openLightbox([
+      {src:'images/foto-2.png', caption:'Mall Segmentation — Cluster Overview'},
+      {src:'images/foto-2b.png', caption:'Mall Segmentation — 3D Visualization (Plotly)'},
+      {src:'images/foto-2c.png', caption:'Mall Segmentation — Segment Profiles'}
+    ])">
+      <img src="images/foto-2.png" alt="Mall Segmentation" loading="lazy">
+      <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+      <div class="thumb-badge">🤖 Machine Learning</div>
+    </div>
+
+    <div class="pcard-body">
+      <div class="pcard-tags">
+        <span class="tag">Python</span><span class="tag">K-Means</span>
+        <span class="tag">Plotly</span><span class="tag">Unsupervised ML</span>
       </div>
-      <div class="pcard-body">
-        <div class="pcard-tags">
-          <span class="tag">Python</span><span class="tag">K-Means</span>
-          <span class="tag">Scikit-learn</span><span class="tag">Plotly</span><span class="tag">Unsupervised ML</span>
-        </div>
-        <div class="pcard-title">
-          <a href="https://github.com/1sleep231/Customer_Segmen" target="_blank" rel="noopener noreferrer">
-            Mall Customer Segmentation — Siapa Pelanggan Kita Sebenarnya? ↗
-          </a>
-        </div>
+      <div class="pcard-title" style="margin-bottom: 8px;">
+        <a href="https://github.com/1sleep231/Customer_Segmen" target="_blank" rel="noopener noreferrer">
+          Mall Customer Segmentation — Siapa Pelanggan Kita Sebenarnya? ↗
+        </a>
+      </div>
+
+      <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green);">
+        <p style="font-size: 13px; font-weight: 600; margin: 0; color: var(--text);">
+          ⚡ TL;DR: Menganalisis pola pengeluaran dengan K-Means clustering untuk menemukan 5 segmen demi optimasi budget marketing.
+        </p>
+      </div>
+
+      <button class="btn-expand" onclick="toggleProjectDetails(this)">
+        <i class="fas fa-chevron-down"></i> Read Full Case Study
+      </button>
+
+      <div class="pcard-details">
         <div class="pcard-section">
           <span class="pcard-section-label">Problem</span>
           <p>Mall memperlakukan 200 pelanggan dengan cara yang sama persis. Tanpa segmentasi berbasis data, budget marketing tersebar merata ke pelanggan yang responsnya sangat berbeda — conversion rendah, ROI tidak optimal.</p>
@@ -163,117 +240,119 @@
           <span class="pcard-section-label">Key Insights</span>
           <p>5 segmen teridentifikasi: <strong>Affluent Spenders</strong> (target loyalty program), <strong>Wealthy Cautious</strong> (hidden opportunity — income tinggi tapi spending rendah, perlu strategi aktivasi), <strong>Young Enthusiasts</strong>, <strong>Balanced Traditionalists</strong>, dan <strong>Frugal Seniors</strong>. Dianalisis dari 3 sudut pandang termasuk 3D clustering interaktif via Plotly.</p>
         </div>
-        <div class="pcard-metrics">
-          <div class="metric"><span class="metric-val">5</span><span class="metric-label">Segments Found</span></div>
+        <div class="pcard-metrics" style="margin-top: 16px; padding-top: 16px;">
+          <div class="metric"><span class="metric-val">5</span><span class="metric-label">Segments</span></div>
           <div class="metric"><span class="metric-val">k=5</span><span class="metric-label">Optimal Clusters</span></div>
-          <div class="metric"><span class="metric-val">2–3×</span><span class="metric-label">Conversion Potential</span></div>
+          <div class="metric"><span class="metric-val">2-3x</span><span class="metric-label">Conversion Potential</span></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="pcard">
-      <div class="pcard-thumb" onclick="openLightbox([
-        {src:'images/foto-4.jpg', caption:'E-Commerce — Geographic Map (GeoPandas)'},
-        {src:'images/foto-4b.png', caption:'E-Commerce — AOV by State'},
-        {src:'images/foto-4c.png', caption:'E-Commerce — Order Distribution'}
-      ])">
-        <img src="images/foto-4.jpg" alt="E-Commerce Analysis">
-        <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+  <div class="pcard-grid" style="animation-delay:0.4s">
+    <div class="pcard-thumb" onclick="openLightbox([
+      {src:'images/foto-4.jpg', caption:'E-Commerce — Geographic Map (GeoPandas)'},
+      {src:'images/foto-4b.png', caption:'E-Commerce — AOV by State'},
+      {src:'images/foto-4c.png', caption:'E-Commerce — Order Distribution'}
+    ])">
+      <img src="images/foto-4.jpg" alt="E-Commerce Analysis" loading="lazy">
+      <div class="thumb-badge">📊 Data Analysis</div>
+      <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+    </div>
+
+    <div class="pcard-body">
+      <div class="pcard-tags">
+        <span class="tag">Python</span><span class="tag">GeoPandas</span>
+        <span class="tag">Seaborn</span><span class="tag">EDA</span>
       </div>
-      <div class="pcard-body">
-        <div class="pcard-tags">
-          <span class="tag">Python</span><span class="tag">Pandas</span>
-          <span class="tag">GeoPandas</span><span class="tag">Seaborn</span><span class="tag">EDA</span>
-        </div>
-        <div class="pcard-title">
-          <a href="https://colab.research.google.com/drive/1P2NYQGAVuozA3Fe0CVC28eGYEHDxuntU?usp=sharing" target="_blank" rel="noopener noreferrer">
-            E-Commerce Geographic Analysis — Volume Tinggi Belum Tentu Nilai Tinggi ↗
-          </a>
-        </div>
+      <div class="pcard-title" style="margin-bottom: 8px;">
+        <a href="https://colab.research.google.com/drive/1P2NYQGAVuozA3Fe0CVC28eGYEHDxuntU?usp=sharing" target="_blank" rel="noopener noreferrer">
+          E-Commerce Geographic Analysis — Volume Tinggi Belum Tentu Nilai Tinggi ↗
+        </a>
+      </div>
+
+      <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green);">
+        <p style="font-size: 13px; font-weight: 600; margin: 0; color: var(--text);">
+          ⚡ TL;DR: Analisis geospasial mengidentifikasi pasar high-value tersembunyi dengan AOV tertinggi di luar wilayah dominan.
+        </p>
+      </div>
+
+      <button class="btn-expand" onclick="toggleProjectDetails(this)">
+        <i class="fas fa-chevron-down"></i> Read Full Case Study
+      </button>
+
+      <div class="pcard-details">
         <div class="pcard-section">
           <span class="pcard-section-label">Problem</span>
           <p>Platform e-commerce Brasil beroperasi di 26+ negara bagian tanpa visibilitas jelas: apakah strategi yang sama efektif untuk semua wilayah? Di mana pasar bernilai tinggi yang tersembunyi di balik dominasi volume São Paulo?</p>
         </div>
         <div class="pcard-section">
           <span class="pcard-section-label">Key Insights</span>
-          <p>São Paulo mendominasi volume pesanan, namun AOV-nya justru rendah. Sebaliknya, <strong>Paraíba, Acre, dan Roraima</strong> memiliki volume kecil tapi AOV tertinggi — pasar high-value yang diperlakukan sama dengan pasar massal. Rekomendasi: dua strategi berbeda untuk dua tipe market.</p>
+          <p>São Paulo mendominasi volume, namun AOV-nya rendah. Sebaliknya, <strong>Paraíba, Acre, dan Roraima</strong> memiliki volume kecil tapi AOV tertinggi. Rekomendasi: strategi berbeda untuk market massal vs high-value.</p>
         </div>
-        <div class="pcard-metrics">
+        <div class="pcard-metrics" style="margin-top: 16px; padding-top: 16px;">
           <div class="metric"><span class="metric-val">100K+</span><span class="metric-label">Transactions</span></div>
-          <div class="metric"><span class="metric-val">9</span><span class="metric-label">Relational Tables</span></div>
           <div class="metric"><span class="metric-val">26+</span><span class="metric-label">States Mapped</span></div>
         </div>
       </div>
     </div>
+  </div>
 
-<div style="display: flex; flex-direction: column; gap: 16px;">
-      <div class="pcard">
-        <div class="pcard-thumb" onclick="openLightbox([
-          {src:'images/foto-3.png', caption:'Retail Dashboard — Main View'},
-          {src:'images/foto-3b.png', caption:'Retail Dashboard — Sales Trend'},
-          {src:'images/foto-3c.png', caption:'Retail Dashboard — Product Performance'}
-        ])">
-          <img src="images/foto-3.png" alt="Retail Dashboard">
-          <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
-        </div>
-        
-        <div class="pcard-body">
-          <div class="pcard-tags">
-            <span class="tag">Looker Studio</span><span class="tag">Dashboard</span><span class="tag">BI</span>
-          </div>
-          <div class="pcard-title">
-            <a href="https://lookerstudio.google.com/reporting/5a86ac63-e482-47c2-8916-60b518606515" target="_blank">
-              Retail Sales Dashboard — Monitoring Real-Time ↗
-            </a>
-          </div>
-          
-          <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green); margin: 10px 0;">
-            <p style="font-size: 13px; font-weight: 600; color: var(--text); margin: 0; line-height: 1.5;">
-              ⚡ TL;DR: Mengubah laporan manual mingguan menjadi dashboard real-time yang memantau 67% revenue utama secara otomatis.
-            </p>
-          </div>
+  <div class="pcard-grid" style="animation-delay:0.5s">
+    <div class="pcard-thumb" onclick="openLightbox([
+      {src:'images/foto-3.png', caption:'Retail Dashboard — Main View'},
+      {src:'images/foto-3b.png', caption:'Retail Dashboard — Sales Trend'},
+      {src:'images/foto-3c.png', caption:'Retail Dashboard — Product Performance'}
+    ])">
+      <img src="images/foto-3.png" alt="Retail Dashboard" loading="lazy">
+      <div class="thumb-badge">📊 Data Visualization</div>
+      <div class="thumb-overlay"><i class="fas fa-images"></i> 3 Screenshots</div>
+    </div>
 
-          <div class="pcard-section">
-            <span class="pcard-section-label">Problem</span>
-            <p>Tim bisnis retail menunggu laporan manual mingguan, sehingga keputusan menjadi lambat dan reaktif.</p>
-          </div>
-
-          <div class="pcard-section">
-            <span class="pcard-section-label">Key Insights</span>
-            <p><strong>3 produk top contributor menyumbang 67% revenue</strong>, namun ketiganya menunjukkan tren penurunan konsisten. Dashboard self-serve mengubah budaya dari reaktif menjadi proaktif.</p>
-          </div>
-
-          <div style="margin-top: 10px;">
-            <button onclick="toggleEmbed()" class="btn-outline" style="padding: 8px 16px; font-size: 11px;">
-              <i class="fas fa-eye"></i> View Live Interactive Dashboard
-            </button>
-          </div>
-
-          <div class="pcard-metrics">
-            <div class="metric"><span class="metric-val">67%</span><span class="metric-label">Revenue by Top 3</span></div>
-            <div class="metric"><span class="metric-val">Real-time</span><span class="metric-label">Live Dashboard</span></div>
-          </div>
-        </div>
-      </div> <div id="dashboard-embed" style="display:none; width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: var(--surface);">
-        <iframe width="100%" height="600" src="https://lookerstudio.google.com/embed/reporting/5a86ac63-e482-47c2-8916-60b518606515/page/1M" frameborder="0" style="border:0; display: block;" allowfullscreen></iframe>
+    <div class="pcard-body">
+      <div class="pcard-tags">
+        <span class="tag">Looker Studio</span><span class="tag">Dashboard</span><span class="tag">BI</span>
+      </div>
+      <div class="pcard-title" style="margin-bottom: 8px;">
+        <a href="https://lookerstudio.google.com/reporting/5a86ac63-e482-47c2-8916-60b518606515" target="_blank" rel="noopener noreferrer">
+          Retail Sales Dashboard — Monitoring Real-Time ↗
+        </a>
       </div>
 
-    </div> <script>
-      function toggleEmbed() {
-        var x = document.getElementById("dashboard-embed");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-          // Opsional: Scroll sedikit ke bawah agar dashboard langsung terlihat penuh
-          setTimeout(() => {
-            x.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }, 100);
-        } else {
-          x.style.display = "none";
-        }
-      }
-    </script>
+      <div class="pcard-tldr" style="background: var(--surface2); padding: 12px; border-radius: 6px; border-left: 3px solid var(--green);">
+        <p style="font-size: 13px; font-weight: 600; color: var(--text); margin: 0; line-height: 1.5;">
+          ⚡ TL;DR: Mengubah laporan manual mingguan menjadi dashboard real-time yang memantau 67% revenue utama secara otomatis.
+        </p>
+      </div>
 
+      <button class="btn-expand" onclick="toggleProjectDetails(this)">
+        <i class="fas fa-chevron-down"></i> Read Full Case Study
+      </button>
+
+      <div class="pcard-details">
+        <div class="pcard-section">
+          <span class="pcard-section-label">Problem</span>
+          <p>Tim bisnis retail menunggu laporan manual mingguan, sehingga keputusan menjadi lambat dan reaktif.</p>
+        </div>
+        <div class="pcard-section">
+          <span class="pcard-section-label">Key Insights</span>
+          <p><strong>3 produk top contributor menyumbang 67% revenue</strong>, namun ketiganya menunjukkan tren penurunan konsisten. Dashboard self-serve mengubah budaya reaktif menjadi proaktif.</p>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <button onclick="openAppModal('https://lookerstudio.google.com/embed/reporting/5a86ac63-e482-47c2-8916-60b518606515/page/1M', 'Retail Sales Dashboard')" class="btn-outline" style="padding: 8px 16px; font-size: 11px; width: 100%;">
+            <i class="fas fa-eye"></i> View Live Interactive Dashboard
+          </button>
+        </div>
+
+        <div class="pcard-metrics" style="margin-top: 16px; padding-top: 16px;">
+          <div class="metric"><span class="metric-val">67%</span><span class="metric-label">Revenue by Top 3</span></div>
+          <div class="metric"><span class="metric-val">Live</span><span class="metric-label">Dashboard</span></div>
+        </div>
+      </div>
+    </div>
   </div>
+
 </div>
 
 <div id="lightbox" class="lightbox-overlay" onclick="closeLightboxOnBg(event)">
@@ -281,13 +360,30 @@
     <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
     <button class="lightbox-prev" onclick="lightboxNav(-1)"><i class="fas fa-chevron-left"></i></button>
     <button class="lightbox-next" onclick="lightboxNav(1)"><i class="fas fa-chevron-right"></i></button>
-    <div class="lightbox-img-wrap"><img id="lightbox-img" src="" alt=""></div>
+    <div class="lightbox-img-wrap"><img id="lightbox-img" src="" alt="" loading="lazy"></div>
     <div class="lightbox-footer">
       <p id="lightbox-caption"></p>
       <span id="lightbox-counter"></span>
     </div>
   </div>
 </div>
+
+<script>
+  // Fungsi Expand/Collapse
+  function toggleProjectDetails(btn) {
+    const detailsContainer = btn.nextElementSibling;
+    
+    if (detailsContainer.classList.contains('open')) {
+      detailsContainer.classList.remove('open');
+      btn.innerHTML = '<i class="fas fa-chevron-down"></i> Read Full Case Study';
+    } else {
+      detailsContainer.classList.add('open');
+      btn.innerHTML = '<i class="fas fa-chevron-up"></i> Hide Case Study';
+    }
+  }
+</script>
+
+
 
 <footer>
   <span class="footer-copy">© 2025 Quinasa Rama · Built with intention.</span>
@@ -346,5 +442,59 @@
     btn.classList.remove('open');
   }));
 </script>
+
+<script>
+  function toggleProjectDetails(btn) {
+    const detailsContainer = btn.nextElementSibling;
+    const icon = btn.querySelector('i');
+    
+    if (detailsContainer.classList.contains('open')) {
+      detailsContainer.classList.remove('open');
+      btn.innerHTML = '<i class="fas fa-chevron-down"></i> Read Full Case Study';
+    } else {
+      detailsContainer.classList.add('open');
+      btn.innerHTML = '<i class="fas fa-chevron-up"></i> Hide Case Study';
+    }
+  }
+</script>
+
+<!-- KOTAK MODAL UNTUK LIVE APP & DASHBOARD -->
+<div id="app-modal-overlay" class="app-modal-overlay" onclick="closeAppModalOnBg(event)">
+  <div class="app-modal-content">
+    <div class="app-modal-header">
+      <span id="app-modal-title">Live Preview</span>
+      <button class="app-modal-close" onclick="closeAppModal()" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <iframe id="app-iframe" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- SCRIPT PENGENDALI MODAL -->
+<script>
+  // Fungsi untuk membuka modal App
+  function openAppModal(url, title) {
+    document.getElementById('app-iframe').src = url; // Inject URL saat tombol dipencet
+    document.getElementById('app-modal-title').innerText = title;
+    document.getElementById('app-modal-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden'; // Kunci background web agar tidak bisa di-scroll
+  }
+
+  // Fungsi untuk menutup modal App
+  function closeAppModal() {
+    document.getElementById('app-modal-overlay').classList.remove('active');
+    document.getElementById('app-iframe').src = ''; // Bersihkan iframe untuk menghemat RAM
+    document.body.style.overflow = ''; // Buka kembali kunci scroll
+  }
+
+  // Tutup jika mengklik area gelap di luar box
+  function closeAppModalOnBg(e) {
+    if (e.target === document.getElementById('app-modal-overlay')) {
+      closeAppModal();
+    }
+  }
+</script>
+
 </body>
 </html>

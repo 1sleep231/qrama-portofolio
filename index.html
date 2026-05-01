@@ -3,21 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Dasar -->
   <meta name="description" content="Data Analyst specializing in Python, SQL, ML, and automated data pipelines. Fresh graduate with hands-on project experience across fintech, retail, and e-commerce.">
   <meta name="author" content="Quinasa Rama">
+  <meta name="keywords" content="Data Analyst, Machine Learning, Python, SQL, Flask, Business Intelligence, Data Pipeline">
+  
+  <!-- Open Graph / Meta Tags (Untuk WhatsApp, LinkedIn, Facebook, dll) -->
   <meta property="og:title" content="Quinasa Rama — Data Analyst Portfolio">
-  <meta property="og:description" content="Data Analyst specializing in Python, SQL, ML, and automated data pipelines. Fresh graduate with hands-on project experience across fintech, retail, and e-commerce.">
+  <meta property="og:description" content="Turning data into decisions. Explore end-to-end data pipelines, ML systems, and automated workflows.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://1sleep231.github.io/">
+  <meta property="og:url" content="https://1sleep231.github.io/qrama-portofolio/"> <!-- GANTI DENGAN URL LENGKAP -->
+  <meta property="og:image" content="https://drive.google.com/file/d/1XAlk9M-aM3J0MSH_AVCrgYlzSRhJf4Gi/view?usp=sharing"> <!-- PENTING: Gunakan URL Absolut (Lengkap) untuk gambar -->
+  
+  <!-- Twitter Card (Opsional, tapi bagus untuk berjaga-jaga) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quinasa Rama — Data Analyst Portfolio">
+  <meta name="twitter:description" content="Turning data into decisions. Explore end-to-end data pipelines, ML systems, and automated workflows.">
+  <meta name="twitter:image" content="https://drive.google.com/file/d/1XAlk9M-aM3J0MSH_AVCrgYlzSRhJf4Gi/view?usp=sharing">
+
   <title>Quinasa Rama — Data Analyst</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.ico">  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
 <header>
   <a href="index.html" class="logo">
     <span class="logo-dot"></span>
@@ -43,6 +58,9 @@
 </div>
 
 <div class="hero">
+  <a href="#values-section" class="scroll-indicator" aria-label="Scroll to Values">
+    <i class="fas fa-chevron-down"></i>
+  </a>
   <div class="hero-left">
     <div class="hero-tag">
       <span></span>
@@ -56,7 +74,7 @@
     </p>
     <div class="hero-ctas">
       <a href="projects.html" class="btn-primary">View Projects →</a>
-      <a href="https://www.linkedin.com/in/quinasa-rama-63125a259/" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn ↗</a>
+      <a href="mailto:quinasa.rama@gmail.com" class="btn-ghost">Email Me ↗</a>
     </div>
   </div>
 
@@ -96,98 +114,66 @@
 
 <div class="divider"></div>
 
-<section>
-  <div class="section-label">Technical Arsenal</div>
-  <h2 class="section-title">Tools & Technologies</h2>
-  <div class="skills-grid">
-    <div class="skill-chip"><i class="fab fa-python"></i><span>Python</span></div>
-    <div class="skill-chip"><i class="fas fa-database"></i><span>SQL</span></div>
-    <div class="skill-chip"><i class="fas fa-table"></i><span>Pandas</span></div>
-    <div class="skill-chip"><i class="fas fa-file-excel"></i><span>Excel</span></div>
-    <div class="skill-chip"><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
-    <div class="skill-chip"><i class="fas fa-chart-line"></i><span>Looker Studio</span></div>
-    <div class="skill-chip"><i class="fas fa-brain"></i><span>Scikit-learn</span></div>
-    <div class="skill-chip"><i class="fas fa-bolt"></i><span>LightGBM</span></div>
-    <div class="skill-chip"><i class="fas fa-server"></i><span>Flask</span></div>
-    <div class="skill-chip"><i class="fas fa-robot"></i><span>n8n</span></div>
-    <div class="skill-chip"><i class="fas fa-cube"></i><span>Supabase</span></div>
-    <div class="skill-chip"><i class="fab fa-github"></i><span>GitHub</span></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <div class="section-label">Selected Work</div>
-  <h2 class="section-title">Featured Projects</h2>
-  <div class="projects-grid">
-
-    <a href="https://github.com/1sleep231/Customer_Churn" target="_blank" rel="noopener noreferrer" class="project-card">
-      <div class="project-thumb">
-        <img src="images/foto-1.png" alt="Customer Churn Prediction">
+<section id="values-section">
+  <div class="section-label">Value Proposition</div>
+  <h2 class="section-title">Values I Can Deliver for Your Business</h2>
+  
+  <div class="values-grid">
+    
+    <!-- PILAR 1: PROJECTS -->
+    <div class="value-card">
+      <div style="font-size: 28px; color: var(--cyan); margin-bottom: 20px;"><i class="fas fa-brain"></i></div>
+      <h3 style="font-size: 20px; color: var(--text); margin-bottom: 12px; line-height: 1.3;">Advanced Analytics & Machine Learning</h3>
+      <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1;">
+        Mengubah raw data menjadi <em>actionable insights</em> dan model prediktif yang berdampak langsung pada metrik bisnis. Saya fokus pada siklus hidup data yang lengkap: mulai dari membersihkan dan merancang arsitektur data, melakukan segmentasi pasar yang presisi, hingga membangun algoritma <em>Machine Learning</em> yang membantu perusahaan menghindari kerugian finansial sebelum terjadi.
+      </p>
+      <div style="background: var(--surface2); padding: 16px; border-radius: 8px; border-left: 3px solid var(--cyan); margin-bottom: 24px;">
+        <strong style="color: var(--text); font-size: 12px; display: block; margin-bottom: 8px;">Proof of Point:</strong>
+        <ul style="margin: 0 0 0 20px; padding: 0; font-size: 12px; color: var(--muted); line-height: 1.6;">
+          <li style="margin-bottom: 6px;">Membangun <strong>SQL Data Warehouse</strong> berbasis <em>Medallion Architecture</em>.</li>
+          <li style="margin-bottom: 6px;">Mende-deploy aplikasi <strong>Customer Churn Prediction</strong> secara <em>real-time</em> menggunakan Flask.</li>
+          <li>Mengoptimalkan strategi e-commerce dan merancang <strong>Retail Dashboard</strong> interaktif.</li>
+        </ul>
       </div>
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">Scikit-learn</span>
-          <span class="project-tag">LightGBM</span>
-          <span class="project-tag">Flask</span>
-        </div>
-        <div class="project-title">Customer Churn Prediction — From Analysis to Deployed Web App</div>
-        <p class="project-desc">
-          End-to-end ML pipeline comparing 4 models, identifying non-obvious churn signals (high-balance customers are higher risk), deployed as a real-time Flask web application.
-        </p>
-        <div class="project-metric">
-          <span class="project-metric-val">0.77</span>
-          <span class="project-metric-label">Recall (SVC) · Production-deployed via Flask</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://github.com/1sleep231/" target="_blank" rel="noopener noreferrer" class="project-card">
-      <div class="project-thumb">
-        <img src="images/dw-architecture.png" alt="SQL Data Warehouse">
-      </div>
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="project-tag">SQL</span>
-          <span class="project-tag">T-SQL</span>
-          <span class="project-tag">ETL</span>
-        </div>
-        <div class="project-title">SQL Data Warehouse — End-to-End Medallion Architecture</div>
-        <p class="project-desc">
-          Built a comprehensive data warehouse solution with bronze, silver, and gold layers, enabling holistic business analysis across multiple source systems.
-        </p>
-        <div class="project-metric">
-          <span class="project-metric-val">3</span>
-          <span class="project-metric-label">Schema Layers · Star Schema</span>
-        </div>
-      </div>
-    </a>
-
-  </div>
-  <a href="projects.html" class="view-all-link">View all 5 projects →</a>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <div class="section-label">Experience</div>
-  <h2 class="section-title">Where I've Worked</h2>
-  <div class="exp-card">
-    <div class="exp-logo">🚇</div>
-    <div>
-      <div class="exp-role">Digital & IT Infrastructure Business Intern</div>
-      <div class="exp-company">PT MRT Jakarta (Perseroda)</div>
-      <div class="exp-period">February 2025 – July 2025</div>
-      <ul class="exp-bullets">
-        <li>Developed RFID solution for merchandise registration, reducing process time by <strong>75%</strong> across 2,000+ items.</li>
-        <li>Analyzed TVM & MyMRTJ Lite infrastructure data using Python and Excel, driving the WhatsApp Ticketing Agent optimization initiative.</li>
-        <li>Managed vendor assessment for PPOB project and conducted Telco technical audit.</li>
-      </ul>
+      <a href="projects.html" style="font-family: 'DM Mono', monospace; font-size: 12px; color: var(--cyan); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">Explore Projects <i class="fas fa-arrow-right"></i></a>
     </div>
+
+    <!-- PILAR 2: EXPERIENCE -->
+    <div class="value-card">
+      <div style="font-size: 28px; color: var(--green); margin-bottom: 20px;"><i class="fas fa-rocket"></i></div>
+      <h3 style="font-size: 20px; color: var(--text); margin-bottom: 12px; line-height: 1.3;">Process Optimization & Product Innovation</h3>
+      <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1;">
+        Menggabungkan keahlian analisis operasional dengan pola pikir <em>product development</em> untuk menciptakan efisiensi nyata di lapangan. Saya terbiasa mengidentifikasi <em>bottleneck</em> pada infrastruktur bisnis, memformulasikan solusi berbasis teknologi, dan memimpin proyek dari tahap konseptualisasi ide (<em>Design Thinking</em>) hingga menjadi produk MVP yang fungsional dan tervalidasi.
+      </p>
+      <div style="background: var(--surface2); padding: 16px; border-radius: 8px; border-left: 3px solid var(--green); margin-bottom: 24px;">
+        <strong style="color: var(--text); font-size: 12px; display: block; margin-bottom: 8px;">Proof of Point:</strong>
+        <ul style="margin: 0 0 0 20px; padding: 0; font-size: 12px; color: var(--muted); line-height: 1.6;">
+          <li style="margin-bottom: 6px;">Mereduksi waktu proses operasional hingga <strong>75%</strong> melalui sistem RFID di PT MRT Jakarta.</li>
+          <li>Memenangkan pendanaan riset nasional <strong>PKM-KC Kemendikbudristek</strong> (Top 12% dari 42.000+ proposal) untuk inovasi MVP IoT.</li>
+        </ul>
+      </div>
+      <a href="experience.html" style="font-family: 'DM Mono', monospace; font-size: 12px; color: var(--green); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">View Experience <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- PILAR 3: EXTRAS -->
+    <div class="value-card">
+      <div style="font-size: 28px; color: var(--amber); margin-bottom: 20px;"><i class="fas fa-network-wired"></i></div>
+      <h3 style="font-size: 20px; color: var(--text); margin-bottom: 12px; line-height: 1.3;">Autonomous Pipelines & AI Integration</h3>
+      <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; flex-grow: 1;">
+        Membangun ekosistem intelijen data yang berjalan secara independen tanpa intervensi manual (<em>hands-free</em>). Saya memiliki kapabilitas untuk merancang alur kerja yang mengotomatisasi penarikan data dari berbagai API, mendeteksi anomali statistik secara <em>real-time</em>, dan mendistribusikan ringkasan pasar yang ditulis langsung oleh AI ke platform komunikasi perusahaan.
+      </p>
+      <div style="background: var(--surface2); padding: 16px; border-radius: 8px; border-left: 3px solid var(--amber); margin-bottom: 24px;">
+        <strong style="color: var(--text); font-size: 12px; display: block; margin-bottom: 8px;">Proof of Point:</strong>
+        <ul style="margin: 0 0 0 20px; padding: 0; font-size: 12px; color: var(--muted); line-height: 1.6;">
+          <li style="margin-bottom: 6px;">Merancang "Indo Fintech Radar" otomatis via <strong>n8n & Supabase</strong>.</li>
+          <li style="margin-bottom: 6px;">Mendeteksi anomali statistik via <strong>Python Z-score</strong> & merangkum pasar menggunakan <strong>LLM API</strong>.</li>
+          <li>Mendistribusikan laporan intelijen harian ke <strong>Looker Studio & Telegram Bot</strong>.</li>
+        </ul>
+      </div>
+      <a href="extras.html" style="font-family: 'DM Mono', monospace; font-size: 12px; color: var(--amber); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">See Automated Pipelines <i class="fas fa-arrow-right"></i></a>
+    </div>
+
   </div>
-  <a href="experience.html" class="view-all-link">Full experience & competitions →</a>
 </section>
 
 <footer>
