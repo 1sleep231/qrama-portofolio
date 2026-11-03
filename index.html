@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q.RAMA | DATA TERMINAL</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@600;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="terminal-layout">
+
+    <!-- ================= PANEL KIRI (CONTROL CENTER) ================= -->
+    <aside class="control-panel">
+
+      <div class="cp-header">
+        <!-- Hapus efek kedip di sini -->
+        <h1 class="logo-text">Q.RAMA</h1>
+
+        <div class="status-box bg-yellow">
+          <!-- Efek Typing Dinamis -->
+          <div style="margin-bottom: 6px;">
+            <span class="status-dot"></span> <span id="typing-text"></span><span class="typing-cursor">|</span>
+          </div>
+          <!-- Status Baru -->
+          <div style="border-top: 2px solid black; padding-top: 6px; font-weight: 700;">
+            STATUS: OPEN FOR OPPORTUNITY
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-profile">
+        <div class="photo-brutal">
+          <img src="images/home3.jpeg" alt="Quinasa Rama">
+        </div>
+        <p class="profile-desc">Digital Business Prof. & Data Enthusiast. Turning raw data into decisions.</p>
+      </div>
+
+      <nav class="cp-nav">
+        <button class="nav-btn active" onclick="switchPanel('cmd-overview')">[01] OVERVIEW.exe</button>
+        <button class="nav-btn" onclick="switchPanel('cmd-projects')">[02] PROJECTS.dat</button>
+        <button class="nav-btn" onclick="switchPanel('cmd-experience')">[03] EXPERIENCE.log</button>
+        <button class="nav-btn" onclick="switchPanel('cmd-pipelines')">[04] PIPELINES.sys</button>
+      </nav>
+
+      <div class="cp-footer">
+        <a href="CV_Quinasa Rama.pdf" target="_blank" class="action-btn bg-white w-100">DOWNLOAD_CV.pdf <i class="fas fa-download"></i></a>
+        <div class="social-grid mt-2">
+          <a href="mailto:quinasarama@gmail.com" class="action-btn bg-yellow w-100">EMAIL</a>
+          <a href="https://linkedin.com/in/quinasa-rama-63125a259/" target="_blank" class="action-btn bg-white w-100">IN</a>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ================= PANEL KANAN (DISPLAY CANVAS) ================= -->
+    <main class="display-canvas">
+
+      <!-- SCREEN 1: OVERVIEW -->
+      <section id="cmd-overview" class="screen active">
+        <h2 class="screen-title">OVERVIEW <span>/ SYS_INFO</span></h2>
+
+        <h1 class="giant-headline">
+          TURNING RAW DATA <br> INTO <span class="bg-yellow px-2 border-black rotate-text">DECISIONS.</span>
+        </h1>
+
+        <!-- KONTEN CV: SUMMARY -->
+        <div class="text-block">
+          <p>Lulusan <strong>Digital Business</strong> yang sangat analitis (IPK 3.86/4.00), memadukan keahlian analisis data yang kuat dengan ketajaman bisnis (<em>business acumen</em>). Mahir menggunakan Python, SQL, dan *BI tools* untuk mengekstrak *actionable insights* dan mengoptimalkan alur kerja.</p>
+          <br>
+          <p>Berpengalaman menerjemahkan kebutuhan klien menjadi cetak biru (<em>blueprint</em>) teknis, memfasilitasi siklus proyek dari awal hingga akhir untuk 10+ proyek IT <em>enterprise</em>. Memiliki rekam jejak dalam mendorong efisiensi operasional, termasuk sistem otomasi yang memangkas waktu pemrosesan hingga 75%.</p>
+        </div>
+
+        <div class="metrics-grid mt-4">
+          <div class="metric-box bg-white">
+            <h3 class="metric-val">10+</h3>
+            <p class="metric-label">Enterprise Projects</p>
+          </div>
+          <div class="metric-box bg-purple text-white">
+            <h3 class="metric-val text-white">75%</h3>
+            <p class="metric-label">Process Time Reduced</p>
+          </div>
+          <div class="metric-box bg-cyan">
+            <h3 class="metric-val">3.86</h3>
+            <p class="metric-label">GPA (Digital Business)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 2: PROJECTS (HORIZONTAL SCROLL) -->
+      <section id="cmd-projects" class="screen">
+        <h2 class="screen-title">PROJECTS <span>/ DATA_VAULT</span></h2>
+
+        <div class="horizontal-scroll-container">
+
+          <!-- DW Project -->
+          <div class="brutal-card-h">
+            <div class="card-img-wrap">
+              <img src="images/dw-architecture.png" alt="Data Warehouse" class="card-img">
+              <span class="tag-floating bg-yellow">DATA ENG</span>
+            </div>
+            <div class="card-body">
+              <h3>Enterprise SQL Data Warehouse</h3>
+              <p>Membangun arsitektur Medallion dari nol untuk menganalisis jutaan baris data CRM & ERP. Menemukan insight strategis produk unggulan.</p>
+
+              <!-- Wrapper tombol & tags agar tidak berantakan -->
+              <div style="margin-top: auto;">
+                <button class="action-btn bg-white w-100 mb-2" onclick="openProject('dw')">VIEW DETAILS</button>
+                <div class="tech-tags">
+                  <span>SQL Server</span><span>Medallion</span><span>Power BI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Churn Predictor -->
+          <div class="brutal-card-h bg-black text-yellow">
+            <div class="card-img-wrap border-yellow">
+              <img src="images/foto-1.png" alt="Churn Prediction" class="card-img">
+              <span class="tag-floating bg-purple text-white border-yellow">MACHINE LEARNING</span>
+            </div>
+            <div class="card-body">
+              <h3 class="text-yellow">Customer Churn Predictor</h3>
+              <p class="text-white">Mendeteksi nasabah berisiko churn via model SVC. Dideploy secara live ke web app untuk digunakan oleh tim bisnis.</p>
+
+              <!-- Wrapper tombol & tags -->
+              <div style="margin-top: auto;">
+                <button class="action-btn bg-white w-100 mb-2" onclick="openProject('churn')">VIEW DETAILS</button>
+                <div class="tech-tags">
+                  <span class="bg-white text-black" style="border-color: var(--yellow);">Python</span><span class="bg-white text-black" style="border-color: var(--yellow);">Flask</span><span class="bg-white text-black" style="border-color: var(--yellow);">SVC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segmentation -->
+          <div class="brutal-card-h">
+            <div class="card-img-wrap">
+              <img src="images/foto-2.png" alt="Segmentation" class="card-img">
+              <span class="tag-floating bg-cyan">MACHINE LEARNING</span>
+            </div>
+            <div class="card-body">
+              <h3>Mall Customer Segmentation</h3>
+              <p>Unsupervised learning K-Means clustering untuk menemukan 5 segmen pelanggan tersembunyi demi optimasi ROI marketing.</p>
+
+              <!-- Wrapper tombol & tags -->
+              <div style="margin-top: auto;">
+                <button class="action-btn bg-white w-100 mb-2" onclick="openProject('segmentation')">VIEW DETAILS</button>
+                <div class="tech-tags">
+                  <span>K-Means</span><span>Plotly</span><span>Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <p class="scroll-hint"><i class="fas fa-arrows-alt-h"></i> SCROLL HORIZONTALLY TO EXPLORE MORE</p>
+      </section>
+
+      <!-- SCREEN 3: EXPERIENCE (DATA TABLE STRUCTURE) -->
+      <section id="cmd-experience" class="screen">
+        <h2 class="screen-title">EXPERIENCE <span>/ EXEC_LOG</span></h2>
+
+        <!-- KONTEN CV: WORK EXPERIENCE -->
+        <table class="brutal-table">
+          <thead>
+            <tr>
+              <th width="15%">TIMEFRAME</th>
+              <th width="25%">ROLE & ORG</th>
+              <th width="50%">IMPACT / DESCRIPTION</th>
+              <th width="10%">DOCS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="bg-yellow fw-700">2026<br><small>Jun - Aug</small></td>
+              <td>
+                <h4 class="table-role">Business Dev. Exec</h4>
+                <span class="table-org">PT Accelist Lentera Indonesia</span>
+              </td>
+              <td>Memfasilitasi siklus 10+ proyek IT untuk akun kunci (Toyota & Isuzu). Menerjemahkan kebutuhan bisnis menjadi <em>blueprint</em> IT. Menyusun estimasi biaya & <em>Scope of Work</em> (SoW) berbasis data alokasi sumber daya.</td>
+              <td class="text-center">
+                <button onclick="openGallery('accelist')" class="action-btn bg-white w-100">VIEW</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-cyan fw-700">2025<br><small>Feb - Jul</small></td>
+              <td>
+                <h4 class="table-role">Digital & IT Infra Intern</h4>
+                <span class="table-org">PT MRT Jakarta (Perseroda)</span>
+              </td>
+              <td>Menganalisis performa infrastruktur (TVM & MyMRTJ Lite) dengan Python. Membuat aplikasi Android untuk otomasi registrasi barang, memangkas waktu proses 75% untuk 2000+ item. Melakukan UI/UX Testing untuk <em>onboarding</em> penyewa.</td>
+              <td class="text-center">
+                <button onclick="openGallery('mrt')" class="action-btn bg-white w-100">VIEW</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-pink fw-700">2023<br><small>Mar - Aug</small></td>
+              <td>
+                <h4 class="table-role">IoT Product Leader (PKM-KC)</h4>
+                <span class="table-org">Kemendikbudristek RI</span>
+              </td>
+              <td>Mendapatkan pendanaan nasional (Top 12% dari 42.000+ proposal). Memimpin <em>end-to-end development</em> prototipe produk MVP IoT berbasis <em>Design Thinking</em> & UI/UX Figma.</td>
+              <td class="text-center">
+                <button onclick="openGallery('pkm')" class="action-btn bg-white w-100">VIEW</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SCREEN 4: PIPELINES -->
+      <section id="cmd-pipelines" class="screen">
+        <h2 class="screen-title">PIPELINES <span>/ AUTOMATION_SCRIPTS</span></h2>
+
+        <div class="pipeline-grid">
+
+          <div class="pipeline-box bg-purple text-white">
+            <div class="pipe-head border-yellow border-bottom pb-2">
+              <h3 class="text-white"><i class="fas fa-satellite-dish"></i> INDO FINTECH RADAR</h3>
+              <span class="brutal-badge bg-yellow text-black border-yellow">IN PROGRESS</span>
+            </div>
+            <div class="pipe-body pt-2">
+              <p>Automated intelligence pipeline via n8n & Supabase. Menarik 4 API harian, mendeteksi anomali via Python Z-score, dan men-generate ringkasan AI via LLM.</p>
+              <div class="tech-tags mt-2">
+                <span class="bg-black text-white border-yellow">n8n</span>
+                <span class="bg-black text-white border-yellow">Python</span>
+                <span class="bg-black text-white border-yellow">LLM API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pipeline-box bg-white">
+            <div class="pipe-head border-black border-bottom pb-2">
+              <h3><i class="fas fa-bolt"></i> FINTECH PULSE MONITOR</h3>
+              <span class="brutal-badge bg-cyan text-black">LIVE</span>
+            </div>
+            <div class="pipe-body pt-2">
+              <p>Sistem hands-free yang menarik data Kurs harian via API ke Google Sheets dan mendistribusikan digest otomatis ke Telegram Bot setiap pagi.</p>
+              <div class="tech-tags mt-2">
+                <span class="bg-light text-black">Google Sheets</span>
+                <span class="bg-light text-black">Telegram Bot</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ================= GALERI FOTO MODAL (Untuk Experience View) ================= -->
+  <!-- Tambahkan onclick="closeGallery()" pada overlay gelap untuk "Click Outside to Close" -->
+  <div id="gallery-modal" class="brutal-modal-overlay" onclick="if(event.target === this) closeGallery()">
+    <div class="brutal-modal-box bg-white">
+      <div class="modal-header border-bottom pb-2 mb-3" style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 id="gallery-title" style="font-family:var(--font-display); text-transform:uppercase;">DOCUMENTATION</h2>
+        <button class="action-btn bg-pink" onclick="closeGallery()">CLOSE [X]</button>
+      </div>
+
+      <!-- Slider Gallery -->
+      <div class="brutal-slider-wrapper">
+        <button class="brutal-slider-btn prev" onclick="moveGallery(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="brutal-slider-btn next" onclick="moveGallery(1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="brutal-slider-track" id="gallery-track">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+
+      <div id="gallery-caption" class="bg-yellow border-black mt-2" style="padding: 12px; font-family: var(--font-mono); font-size: 14px; font-weight: 700; text-align: center; text-transform: uppercase; box-shadow: 4px 4px 0px var(--black);">
+          <!-- Text injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PROJECT DETAILS MODAL ================= -->
+  <!-- Tambahkan onclick="closeProject()" pada overlay gelap untuk "Click Outside to Close" -->
+  <div id="project-modal" class="brutal-modal-overlay" onclick="if(event.target === this) closeProject()">
+    <div class="brutal-modal-box bg-white">
+      <div class="modal-header border-bottom pb-2 mb-3" style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 id="project-title" style="font-family:var(--font-display); text-transform:uppercase;">PROJECT TITLE</h2>
+        <button class="action-btn bg-yellow" onclick="closeProject()">CLOSE [X]</button>
+      </div>
+      <div id="project-content" style="font-size: 15px; font-weight: 500; line-height: 1.6; max-height: 50vh; overflow-y: auto; padding-right: 10px;">
+          <!-- Detail disuntikkan oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+      /* PANELS SWITCHING LOGIC */
+      function switchPanel(panelId) {
+        document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+        document.getElementById(panelId).classList.add('active');
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+      }
+
+      /* GALLERY LOGIC (Experience Docs) */
+      const galleryData = {
+        'accelist': [
+          { src: 'images/Accelist1.jpg',  caption: 'Dokumentasi bersama Management PT Accelist Lentera Indonesia' },
+          { src: 'images/Accelist2.jpg', caption: 'Surat Rekomendasi PT Accelist Lentera Indonesia' }
+        ],
+        'mrt': [
+          { src: 'images/mrt_foto1.jpeg', caption: 'Presentasi penggunaan produk Martishop dengan tim internal' },
+          { src: 'images/mrt_foto2.jpeg', caption: 'Foto bersama Departemen IT & Infrastructure Business PT MRT Jakarta' },
+          { src: 'images/mrt_foto3.jpg', caption: 'Bidang kerja selama magang di PT MRT Jakarta' },
+          { src: 'images/SertifikatMagang.jpg', caption: 'Sertifikat Magang PT MRT Jakarta' }
+        ],
+        'pkm': [
+          { src: 'images/pkm_foto1.jpg', caption: 'Sertifikat PKM-KC dari Kemendikbudristek RI' },
+          { src: 'images/pkm_foto2.jpg', caption: 'Sertifikat PKM-KC dari Universitas Negeri Jakarta' },
+          { src: 'images/pkm_foto3.png', caption: 'Deskripsi Scope of Work kegiatan PKM-KC 1' },
+          { src: 'images/pkm_foto4.png', caption: 'Deskripsi Scope of Work kegiatan PKM-KC 2' },
+          { src: 'images/pkm_foto5.png', caption: 'Deskripsi Scope of Work kegiatan PKM-KC 3' }
+        ]
+      };
+
+      window.galleryState = {
+          index: 0,
+          key: ''
+      };
+
+      function openGallery(key) {
+        const track = document.getElementById('gallery-track');
+        const title = document.getElementById('gallery-title');
+        const captionBox = document.getElementById('gallery-caption');
+
+        if (!galleryData[key]) {
+            console.error("Data galeri tidak ditemukan untuk kunci:", key);
+            return;
+        }
+
+        track.innerHTML = '';
+        window.galleryState.key = key;
+        window.galleryState.index = 0;
+        title.innerText = key + " DOCS";
+
+        galleryData[key].forEach(item => {
+          const img = document.createElement('img');
+          img.src = item.src;
+          track.appendChild(img);
+        });
+
+        track.style.transform = `translateX(0)`;
+        captionBox.innerText = galleryData[key][0].caption;
+        document.getElementById('gallery-modal').classList.add('active');
+      }
+
+      function closeGallery() {
+        document.getElementById('gallery-modal').classList.remove('active');
+      }
+
+      function moveGallery(direction) {
+        const track = document.getElementById('gallery-track');
+        const captionBox = document.getElementById('gallery-caption');
+
+        const currentKey = window.galleryState.key;
+        const slidesCount = galleryData[currentKey].length;
+
+        if(slidesCount === 0) return;
+
+        window.galleryState.index += direction;
+
+        if (window.galleryState.index < 0) {
+            window.galleryState.index = slidesCount - 1;
+        } else if (window.galleryState.index >= slidesCount) {
+            window.galleryState.index = 0;
+        }
+
+        track.style.transform = `translateX(-${window.galleryState.index * 100}%)`;
+        captionBox.innerText = galleryData[currentKey][window.galleryState.index].caption;
+      }
+
+      /* ================= TYPING EFFECT LOGIC ================= */
+      const roles = ["DATA ANALYST", "BUSINESS ANALYST", "BI DEVELOPER"]; // Saya update agar lebih relevan dengan Data & Business
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeEffect() {
+        const currentRole = roles[roleIndex];
+        const textElement = document.getElementById("typing-text");
+
+        if (isDeleting) {
+          textElement.innerText = currentRole.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          textElement.innerText = currentRole.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        let timer = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+          timer = 2000;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+        setTimeout(typeEffect, timer);
+      }
+
+      document.addEventListener("DOMContentLoaded", typeEffect);
+
+
+      /* ================= PROJECT POP-UP LOGIC ================= */
+      const projectDetails = {
+        'dw': {
+          title: "Enterprise SQL Data Warehouse",
+          content: "<p><strong>Objektif:</strong><br>Sistem pelaporan di perusahaan sangat lambat karena data CRM dan ERP yang terpencar di berbagai sumber.</p><br><p><strong>Solusi Teknis:</strong><br>Merancang <em>automated data warehouse</em> yang mengintegrasikan seluruh data dari berbagai sumber (CRM/ERP).<br>Diimplementasikan menggunakan <strong>Medallion Architecture (Bronze, Silver, Gold layers)</strong> di SQL Server.<br>Mendesain struktur <em>Star Schema</em> melalui <em>automated ETL pipelines</em>.</p><br><p><strong>Dampak Bisnis (Impact):</strong><br>Waktu pemrosesan dan ekstraksi pelaporan berkurang drastis, memungkinkan laporan dilakukan secara *real-time*.<br>Mampu memberikan <em>strategic insight</em> dengan mengidentifikasi *single product category* yang mendrive >90% total revenue untuk menentukan panduan strategi penjualan.</p>"
+        },
+        'churn': {
+          title: "Customer Churn Predictor Web App",
+          content: "<p><strong>Objektif:</strong><br>Bank perlu mendeteksi kemungkinan nasabah berpindah (<em>churn</em>) lebih awal untuk melakukan tindakan pencegahan.</p><br><p><strong>Solusi Teknis:</strong><br>Mengembangkan ML Pipeline yang membandingkan 4 model klasifikasi algoritma (Random Forest, Logistic Regression, XGBoost, dll).<br>Mencapai <strong>0.77 recall score</strong> menggunakan model <em>Support Vector Classification (SVC)</em>.<br>Membangun aplikasi web (<em>Predictive Web Application</em>) dengan <strong>Flask (Python)</strong>.</p><br><p><strong>Dampak Bisnis (Impact):</strong><br>Mentransisikan model *Machine Learning* dari sekadar *Jupyter notebook* statis menjadi *tool* bisnis yang *live* dan interaktif. Tim bisnis kini bisa memprediksi nasabah *churn* secara <em>real-time</em> untuk mengeksekusi strategi retensi proaktif.</p>"
+        },
+        'segmentation': {
+          title: "Mall Customer Segmentation",
+          content: "<p><strong>Objektif:</strong><br>Strategi marketing <em>mall</em> yang tidak efisien karena kampanye dipukul rata tanpa melihat profil belanja spesifik pelanggan.</p><br><p><strong>Solusi Teknis:</strong><br>Menerapkan pendekatan <em>unsupervised learning</em> (K-Means Clustering) menggunakan Python (Pandas, Scikit-learn).<br>Menganalisis anomali data serta melakukan reduksi dimensi, kemudian memvisualisasikannya via <strong>Plotly</strong>.</p><br><p><strong>Dampak Bisnis (Impact):</strong><br>Berhasil mengekstraksi 5 persona pelanggan tersembunyi (*hidden patterns*). Ini sangat vital untuk mengoptimalkan ROI <em>marketing</em> melalui promosi target yang jauh lebih efisien.</p>"
+        }
+      };
+
+      function openProject(key) {
+        document.getElementById('project-title').innerText = projectDetails[key].title;
+        document.getElementById('project-content').innerHTML = projectDetails[key].content;
+        document.getElementById('project-modal').classList.add('active');
+      }
+
+      function closeProject() {
+        document.getElementById('project-modal').classList.remove('active');
+      }
+  </script>
+</body>
+</html>

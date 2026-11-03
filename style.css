@@ -1,0 +1,286 @@
+/* ================= NEO-BRUTALISM VARIABLES ================= */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --bg-light: #e8e8e8; /* Abu-abu industrial */
+
+  --yellow: #FAFF00;
+  --purple: #B28DFF;
+  --cyan: #00E5FF;
+  --pink: #FF66B2;
+
+  --border-thick: 4px solid var(--black);
+  --border-thin: 2px solid var(--black);
+  --shadow-hard: 6px 6px 0px var(--black);
+  --shadow-hover: 2px 2px 0px var(--black);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'DM Mono', monospace; /* Tambahan font ala koding/data */
+}
+
+/* ================= RESET ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--black); /* Background layar luar hitam pekat */
+  color: var(--black);
+  line-height: 1.6;
+  height: 100vh; /* Kunci layarnya agar sebesar 100% monitor (TIDAK BISA SCROLL BAWAH) */
+  overflow: hidden;
+}
+
+/* UTILS */
+.bg-yellow { background-color: var(--yellow) !important; }
+.bg-purple { background-color: var(--purple) !important; }
+.bg-cyan { background-color: var(--cyan) !important; }
+.bg-pink { background-color: var(--pink) !important; }
+.bg-white { background-color: var(--white) !important; }
+.bg-light { background-color: var(--bg-light) !important; }
+.bg-black { background-color: var(--black) !important; }
+.text-white { color: var(--white) !important; }
+.text-yellow { color: var(--yellow) !important; }
+.text-black { color: var(--black) !important; }
+.text-center { text-align: center; }
+.w-100 { width: 100%; }
+.mt-2 { margin-top: 10px; }
+.mt-4 { margin-top: 24px; }
+.pb-2 { padding-bottom: 10px; }
+.pt-2 { padding-top: 10px; }
+.px-2 { padding: 0 10px; }
+.border-black { border: var(--border-thick); }
+.border-yellow { border: 4px solid var(--yellow); }
+.border-bottom { border-bottom: var(--border-thick); }
+.fw-700 { font-weight: 700; }
+
+/* ================= LAYOUT SPLIT SCREEN ================= */
+.terminal-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg-light); /* Background dalam area aplikasi */
+}
+
+/* ================= KIRI: CONTROL PANEL (30%) ================= */
+.control-panel {
+  width: 25%;
+  min-width: 280px;
+  background: var(--bg-light);
+  border-right: var(--border-thick);
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px; /* Padding atas-bawah dikurangi dari 20px ke 15px */
+  box-shadow: 10px 0 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.control-panel::-webkit-scrollbar { display: none; }
+
+/* HEADER PANEL KIRI */
+.cp-header { margin-bottom: 10px; } /* Margin bawah dikurangi dari 15px ke 10px */
+.logo-text { font-family: var(--font-display); font-size: 26px; font-weight: 800; letter-spacing: -1px; line-height: 1; } /* Ukuran font dikecilkan dari 28px ke 26px */
+.typing-cursor { animation: blink 1s step-end infinite; font-weight: 800; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.status-box {
+  padding: 6px; /* Padding dikurangi dari 8px ke 6px */
+  border: var(--border-thick);
+  font-family: var(--font-mono);
+  font-size: 10px; /* Ukuran font dikecilkan dari 11px ke 10px */
+  font-weight: 500;
+  box-shadow: 2px 2px 0px var(--black); /* Shadow dikecilkan */
+  margin-top: 5px; /* Margin atas dikurangi dari 8px ke 5px */
+}
+.status-dot { display: inline-block; width: 6px; height: 6px; background: var(--black); border-radius: 50%; animation: blink 1.5s infinite; margin-right: 4px;}
+
+/* PROFILE (Dibuat Kompak) */
+.cp-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px; /* Margin bawah dikurangi dari 15px ke 10px */
+}
+.photo-brutal {
+  width: 90px; /* Ukuran foto dikunci jadi lebih kecil (90px x 90px) */
+  height: 90px;
+  border: var(--border-thick);
+  box-shadow: 3px 3px 0px var(--black); /* Shadow dikecilkan */
+  background: var(--black);
+  overflow: hidden;
+  margin-bottom: 8px; /* Margin bawah dikurangi dari 10px ke 8px */
+}
+.photo-brutal img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2); }
+.profile-desc { font-size: 11px; font-weight: 600; line-height: 1.3; } /* Ukuran font dikecilkan sedikit */
+
+/* NAVIGASI KIRI */
+.cp-nav { display: flex; flex-direction: column; gap: 6px; } /* Gap antar tombol dikurangi dari 8px ke 6px */
+.nav-btn {
+  background: var(--white);
+  border: var(--border-thick);
+  padding: 8px 10px; /* Padding dalam tombol dikurangi */
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 12px; /* Ukuran font dikecilkan dari 13px ke 12px */
+  font-weight: 600;
+  box-shadow: 2px 2px 0px var(--black); /* Shadow dikecilkan */
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.nav-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0px var(--black); background: var(--purple); color: var(--white); }
+.nav-btn.active { background: var(--black); color: var(--yellow); transform: translate(2px, 2px); box-shadow: 0 0 0 var(--black); }
+
+/* FOOTER KIRI */
+.cp-footer { margin-top: auto; padding-top: 10px; } /* Mendorong footer ke bawah namun memastikan ada jarak jika mepet */
+
+.action-btn {
+  display: inline-flex; justify-content: center; align-items: center; gap: 4px; /* Gap ikon dan teks dikurangi */
+  border: var(--border-thick); padding: 8px 10px; font-family: var(--font-body); font-weight: 700; font-size: 12px; /* Padding dan font dikecilkan */
+  color: var(--black); text-decoration: none; box-shadow: 2px 2px 0px var(--black); cursor: pointer; transition: 0.1s;
+}
+.action-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--black);
+}
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px; /* Gap antar tombol grid dikurangi dari 10px ke 8px */
+}
+
+/* ================= AKHIR PANEL KIRI ================= */
+
+/* ================= KANAN: DISPLAY CANVAS (70%) ================= */
+.display-canvas {
+  width: 75%;
+  position: relative;
+  background: var(--white); /* Canvas area terang */
+  /* Pola grid rahasia di background ala kertas millimeter blok */
+  background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Sistem Ganti Layar */
+.screen {
+  position: absolute;
+  inset: 0;
+  padding: 30px 50px;
+  overflow-y: hidden; /* Bisa scroll di dalam canvas KANAN saja */
+  display: none;    /* Sembunyikan semua konten by default */
+  flex-direction: column;
+  justify-content: center;
+}
+.screen.active {
+  display: flex; /* Munculkan hanya konten yang aktif */
+  animation: brutalSlideIn 0.3s ease forwards;
+}
+.screen-title { font-family: var(--font-mono); font-size: 14px; margin-bottom: 20px; border-bottom: var(--border-thick); padding-bottom: 10px; }
+
+/* --- KONTEN: OVERVIEW --- */
+.giant-headline { font-family: var(--font-display); font-size: clamp(35px, 5vw, 60px); line-height: 1.1; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; }
+.rotate-text { display: inline-block; transform: rotate(-2deg); box-shadow: 6px 6px 0px var(--black); }
+.text-block { font-size: 15px; max-width: 800px; font-weight: 500; border-left: var(--border-thick); padding-left: 20px; }
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 700px; margin-top: 25px; }
+.metric-box { border: var(--border-thick); padding: 15px; box-shadow: 6px 6px 0px var(--black); }
+.metric-val { font-family: var(--font-display); font-size: 36px; font-weight: 800; line-height: 1; margin-bottom: 5px; }
+.metric-label { font-family: var(--font-mono); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+
+/* --- KONTEN: PROJECTS (HORIZONTAL SCROLL) --- */
+.horizontal-scroll-container {
+  display: flex; overflow-x: auto; gap: 30px; padding: 10px 10px 20px 10px;
+  scrollbar-width: thin; scrollbar-color: var(--black) var(--bg-light);
+}
+.horizontal-scroll-container::-webkit-scrollbar { height: 10px; }
+.horizontal-scroll-container::-webkit-scrollbar-track { background: var(--bg-light); border: var(--border-thin); }
+.horizontal-scroll-container::-webkit-scrollbar-thumb { background: var(--black); border: 2px solid var(--bg-light); }
+
+.brutal-card-h { min-width: 380px; max-width: 380px; border: var(--border-thick); background: var(--white); box-shadow: 8px 8px 0px var(--black); display: flex; flex-direction: column; min-height: max-content; }
+.card-img-wrap { height: 150px; background: var(--black); position: relative; border-bottom: var(--border-thick); }
+.card-img { width: 100%; height: 100%; object-fit: cover; }
+.tag-floating { position: absolute; top: 10px; right: -10px; border: var(--border-thick); padding: 4px 10px; font-weight: 700; font-size: 11px; box-shadow: 3px 3px 0px var(--black); }
+.card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.card-body h3 { font-family: var(--font-display); font-size: 18px; text-transform: uppercase; margin-bottom: 10px; line-height: 1.1; }
+.card-body p { font-size: 14px; font-weight: 500; margin-bottom: 15px; flex-grow: 1; }
+.scroll-hint { font-family: var(--font-mono); font-weight: 700; font-size: 13px; text-align: right; margin-top: 10px; }
+
+/* Tech Tags */
+.tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tech-tags span { border: var(--border-thin); padding: 3px 8px; font-size: 10px; font-weight: 700; background: var(--bg-light); color: var(--black); }
+
+/* --- KONTEN: EXPERIENCE (RAW TABLE) --- */
+.brutal-table { width: 100%; border-collapse: collapse; border: var(--border-thick); box-shadow: 8px 8px 0px var(--black); background: var(--white); }
+.brutal-table th, .brutal-table td { border: var(--border-thick); padding: 12px 15px; vertical-align: top; }
+.brutal-table th { background: var(--black); color: var(--yellow); font-family: var(--font-mono); font-size: 12px; text-align: left; }
+.table-role { font-family: var(--font-display); font-size: 18px; text-transform: uppercase; margin-bottom: 5px; }
+.table-org { font-family: var(--font-mono); font-size: 12px; font-weight: 600; text-decoration: underline; }
+.brutal-table td { font-size: 14px; }
+
+/* --- KONTEN: PIPELINES --- */
+.pipeline-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 800px; }
+.pipeline-box { border: var(--border-thick); padding: 20px; box-shadow: 6px 6px 0px var(--black); }
+.pipe-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.pipe-head h3 { font-family: var(--font-display); font-size: 20px; text-transform: uppercase; margin: 0; }
+.brutal-badge { border: var(--border-thin); padding: 4px 10px; font-weight: 700; font-size: 11px; box-shadow: 2px 2px 0px var(--black); }
+.pipe-body p { font-size: 14px; font-weight: 600; }
+
+/* ================= MODAL GALLERY ================= */
+.brutal-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: 0.1s;
+}
+.brutal-modal-overlay.active { opacity: 1; pointer-events: auto; }
+.brutal-modal-box { width: 90%; max-width: 800px; border: var(--border-thick); box-shadow: 16px 16px 0px var(--yellow); padding: 30px; background: var(--white); }
+
+/* Slider di Modal */
+.brutal-slider-wrapper {
+  position: relative; width: 100%; border: var(--border-thick); overflow: hidden; background: var(--black); box-shadow: 6px 6px 0px var(--black);
+}
+
+/* PERBAIKAN DI SINI: memastikan track slider membentang dengan benar */
+.brutal-slider-track {
+  display: flex; height: 400px; transition: transform 0.3s ease-out; width: 100%;
+}
+
+/* PERBAIKAN DI SINI: memastikan setiap gambar yang disuntikkan JS mengambil ruang 100% dari lebar slider */
+.brutal-slider-track img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%; /* MEMAKSA GAMBAR TIDAK TERGENCET JADI 0px */
+  object-fit: contain;
+  flex-shrink: 0;
+  background: var(--white);
+}
+
+.brutal-slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: var(--yellow); border: var(--border-thick); width: 45px; height: 45px; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 4px 4px 0px var(--black); }
+.brutal-slider-btn:active { transform: translateY(-50%) translate(2px, 2px); box-shadow: 2px 2px 0px var(--black); }
+.brutal-slider-btn.prev { left: 10px; }
+.brutal-slider-btn.next { right: 10px; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .terminal-layout { flex-direction: column; overflow: auto; height: auto; }
+  .control-panel { width: 100%; min-width: unset; border-right: none; border-bottom: var(--border-thick); padding: 20px; position: sticky; top: 0; z-index: 50; }
+  .display-canvas { width: 100%; }
+
+  /* Hilangkan posisi absolut untuk mobile, susun jadi vertikal biasa */
+  .screen { position: relative; inset: unset; padding: 30px 20px; display: none; }
+  .cp-nav { flex-direction: row; overflow-x: auto; gap: 10px; padding-bottom: 10px; margin-bottom: 10px; border-bottom: var(--border-thick); }
+  .nav-btn { white-space: nowrap; }
+
+  .horizontal-scroll-container { flex-direction: column; overflow: visible; gap: 30px; }
+  .brutal-card-h { min-width: 100%; max-width: 100%; }
+
+  /* Paksa tabel jadi blok (Responsive Brutal Table) */
+  .brutal-table, .brutal-table tbody, .brutal-table tr, .brutal-table td { display: block; width: 100%; }
+  .brutal-table thead { display: none; /* Sembunyikan header tabel di mobile */ }
+  .brutal-table tr { margin-bottom: 20px; border-bottom: var(--border-thick); }
+  .brutal-table td { border: none; border-bottom: var(--border-thin); }
+}
+
+/* ================= UTILITY CLASSES TAMBAHAN ================= */
+.mb-2 { margin-bottom: 10px; }
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+  font-weight: 800;
+  color: var(--black);
+}
